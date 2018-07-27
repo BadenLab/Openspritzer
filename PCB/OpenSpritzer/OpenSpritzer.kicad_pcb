@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 11)
+    (drawings 13)
     (tracks 99)
     (zones 0)
     (modules 18)
@@ -12,7 +12,7 @@
   (page A4)
   (layers
     (0 F.Cu signal hide)
-    (31 B.Cu signal)
+    (31 B.Cu signal hide)
     (32 B.Adhes user)
     (33 F.Adhes user)
     (34 B.Paste user)
@@ -833,6 +833,12 @@
     (pad 1 np_thru_hole circle (at 0 0) (size 3.2 3.2) (drill 3.2) (layers *.Cu *.Mask))
   )
 
+  (gr_text "Source:\nhttps://open-labware.net/\nprojects/openspritzer/" (at 107.5 122.5 90) (layer B.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.3)) (justify left))
+  )
+  (gr_text "OpenSpritzer v0.01\n20180727\nBy AM Chagas\nReleased under CERN OHL v1.2" (at 120.5 106.5 90) (layer B.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.3)))
+  )
   (gr_line (start 83 130) (end 83.5 130) (layer Edge.Cuts) (width 0.2))
   (gr_line (start 83 81) (end 83 130) (layer Edge.Cuts) (width 0.2))
   (gr_line (start 131 81) (end 83 81) (layer Edge.Cuts) (width 0.2))
