@@ -3,7 +3,7 @@
 <h3 align="center">An open hardware pressure ejection system for reliably delivering picolitre volumes.
 </h3><p align="center"><h6 align="right">by C.J. Forman, H. Tomes, B. Mbobo, R.J. Burman, M. Jacobs, T Baden &
 J.V. Raimondo</h6>
-<img align="center" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Cover%20Picture2.PNG" width="750"/>
+<img align="center" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Cover%20Picture2.PNG" width="1000"/>
 </p>
 
 
