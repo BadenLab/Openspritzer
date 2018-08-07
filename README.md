@@ -1,11 +1,11 @@
 <p align="right"><img src="https://github.com/BadenLab/Zebrafish-visual-space-model/blob/master/Images/Logo.png" width="150"/>
-<h1 align="center">#Openspritzer
-an open hardware pressure ejection system for reliably delivering picolitre volumes.
-
-<p align="center">
+<h1 align="center">Openspritzer
+</h1><p align="center">
+<h2 align="center">an open hardware pressure ejection system for reliably delivering picolitre volumes.
+</h2><p align="center">
 <img src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Cover%20Picture.png" width="500"/>
 </p>
-</h1>
+
 
 The ability to reliably and precisely deliver picolitre volumes is an important component of biological
 research. Here we describe a high-performance, low-cost, open hardware pressure ejection system
