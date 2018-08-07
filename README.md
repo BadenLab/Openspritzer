@@ -1,9 +1,9 @@
 <p align="right"><img src="https://github.com/BadenLab/Zebrafish-visual-space-model/blob/master/Images/Logo.png" width="150"/>
-<h1 align="center"># Openspritzer
+<h1 align="center">#Openspritzer
 an open hardware pressure ejection system for reliably delivering picolitre volumes.
 
 <p align="center">
-<img src="https://github.com/BadenLab/Zebrafish-visual-space-model/blob/master/Images/Readme%20Cover.png" width="500"/>
+<img src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Cover%20Picture.png" width="500"/>
 </p>
 </h1>
 
