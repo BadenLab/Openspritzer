@@ -1,21 +1,26 @@
 <p align="right"><img src="https://github.com/BadenLab/Zebrafish-visual-space-model/blob/master/Images/Logo.png" width="300"/>
 <h1 align="center">Openspritzer</h1></p>
 <h3 align="center">An open hardware pressure ejection system for reliably delivering picolitre volumes.
-</h3><p align="center"><h6 align="right">C.J. Forman, H. Tomes, B. Mbobo, R.J. Burman, M. Jacobs5, T Baden &
+</h3><p align="center"><h6 align="right">C.J. Forman, H. Tomes, B. Mbobo, R.J. Burman, M. Jacobs, T Baden &
 J.V. Raimondo</h6>
-<img src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Cover%20Picture.png" width="750"/>
+<img align="center" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Cover%20Picture.png" width="750"/>
 </p>
 
 
 The ability to reliably and precisely deliver picolitre volumes is an important component of biological
-research. Here we describe a high-performance, low-cost, open hardware pressure ejection system
-(Openspritzer), which can be constructed from off the shelf components.
+research. Here we describe a high-performance, low-cost, open hardware pressure ejection system (Openspritzer),
+which can be constructed from off the shelf components.
 
-- [A DIY opensource microinjector](#a-DIY-opensource-microinjector)
-- [Estimating a field of view](#correlating-a-recording-area-into-the-visual-space)
+We anticipate that due to its highperformance and low cost
+Openspritzer will be of interest to a broad range of researchers working in the life and physical sciences.
+
+
+- [A £350 DIY opensource microinjector](#a-DIY-opensource-microinjector)
+- [An efficient device that provides the same level of control as commercial systems](#correlating-a-recording-area-into-the-visual-space)
 - [A handy tool for protocol design](#A-handy-tool-for-protocol-design)
 
 ## A DIY opensource microinjector
+Compared to similar commercial systems that can cost up to several thousand pounds, The cost of the fully equiped Openspritzer (~£350) makes it particularly attractive for those wishing to pursue cutting-edge techniaues in low ressource environments.
 
 When connected to a standard micro-pipette via suitable pneumatic tubing, the device is capable of
 delivering minute doses of reagents to a wide range of biological and chemical systems.
