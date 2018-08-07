@@ -3,16 +3,19 @@
 <h3 align="center">An open hardware pressure ejection system for reliably delivering picolitre volumes.
 </h3><p align="center"><h6 align="right">by C.J. Forman, H. Tomes, B. Mbobo, R.J. Burman, M. Jacobs, T Baden &
 J.V. Raimondo</h6>
-<img align="center" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Cover%20Picture2.png" width="750"/>
+<img align="center" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Cover%20Picture2.PNG" width="750"/>
 </p>
 
 
-Designed for ease of use, robustness and low-cost, the “Openspritzer” is an open hardware “Picospritzer” as routinely used in biological labs around the world. The performance of Openspritzer and commercial alternatives is effectively indistiguishable.
+Designed for ease of use, robustness and low-cost, the “Openspritzer” is an open hardware “Picospritzer” as routinely used
+in biological labs around the world. The performance of Openspritzer and commercial alternatives is effectively indistiguishable.
 
-The system is based on a solenoid valve connected to a pressure gauge. Control can be attained directly via an external TTL pulse or internally through an Arduino set by a rotary encoder. The basic setup can be put together for 3-400€, or substantially less if you are prepare to shop around.
+The system is based on a solenoid valve connected to a pressure gauge. Control can be attained directly via an external TTL pulse
+or internally through an Arduino set by a rotary encoder. The basic setup can be put together for 3-400€, or substantially less if you
+are prepare to shop around.
 
-We anticipate that due to its highperformance and low cost
-Openspritzer will be of interest to a broad range of researchers working in the life and physical sciences.
+We anticipate that due to its high performance and low cost Openspritzer will be of interest to a broad range of researchers working
+in the life and physical sciences.
 
 
 - [A £350 DIY opensource microinjector](#a-DIY-opensource-microinjector)
