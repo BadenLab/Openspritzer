@@ -1,7 +1,8 @@
 <p align="right"><img src="https://github.com/BadenLab/Zebrafish-visual-space-model/blob/master/Images/Logo.png" width="300"/>
 <h1 align="center">Openspritzer</h1></p>
 <h3 align="center">An open hardware pressure ejection system for reliably delivering picolitre volumes.
-</h3><p align="center">
+</h3><p align="center"><h5>C.J. Forman, H. Tomes, B. Mbobo, R.J. Burman, M. Jacobs5, T Baden
+J.V. Raimondo</h5>
 <img src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Cover%20Picture.png" width="750"/>
 </p>
 
@@ -9,8 +10,19 @@
 The ability to reliably and precisely deliver picolitre volumes is an important component of biological
 research. Here we describe a high-performance, low-cost, open hardware pressure ejection system
 (Openspritzer), which can be constructed from off the shelf components.
+
+- [A DIY opensource microinjector](#a-DIY-opensource-microinjector)
+- [Estimating a field of view](#correlating-a-recording-area-into-the-visual-space)
+- [A handy tool for protocol design](#A-handy-tool-for-protocol-design)
+
+## A DIY opensource microinjector
+
 When connected to a standard micro-pipette via suitable pneumatic tubing, the device is capable of
-delivering minute doses of reagents to a wide range of biological and chemical systems. In this work,
+delivering minute doses of reagents to a wide range of biological and chemical systems.
+
+
+
+In this work,
 we characterise the performance of the device and compare it to a popular commercial system using two-photon
 fluorescence microscopy. We found that Openspritzer provides the same level of control over
 delivered reagent dose as the commercial system. Next, we demonstrate the utility of Openspritzer in
