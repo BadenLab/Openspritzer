@@ -32,8 +32,6 @@ This repository contains detailed [assembly instructions](https://github.com/Bad
 
 The [bill of material](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/BOM.csv) details all pneumatic, mechanical and elecrtonic components required along with possible supplier URL links.
 
-The device is controled by an arduino nano. The [.ino code](https://github.com/BadenLab/Openspritzer/tree/master/Arduino) can be modified and uploaded as many times as you like. The way the Openspritzer code has been constructed allows simple modification of key parameters such as the base unit of time. These are all included at the beginning of the code for ease of reference.
-
 <img align="right" width="100" height="132" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB%20Board.png">
 
 To simplify the wiring assembly, we have designed a customed [circuit board](https://github.com/BadenLab/Openspritzer/tree/master/PCB). Gerber files can be send to PCB prototype enterprise for production.
@@ -42,10 +40,10 @@ To simplify the wiring assembly, we have designed a customed [circuit board](htt
 
 We used [OpenSCAD](http://openscad.org) to design the [box and lid](https://github.com/BadenLab/Openspritzer/tree/master/3D%20printing%20files) stl files that could be 3D printed to efficiently hold all openspritzer components. The OpenSCAD script is provided. You may have to modify the measurements in the script to comply with the components that you have purchased.
 
+The device is controled by an arduino nano. The [.ino code](https://github.com/BadenLab/Openspritzer/tree/master/Arduino) can be modified and uploaded as many times as you like. The way the Openspritzer code has been constructed allows simple modification of key parameters such as the base unit of time. These are all included at the beginning of the code for ease of reference.
 
 
- The Arduino code and SCAD files for the exterior casing are
-provided and may be downloaded at http://raimondolab.com/Openspritzer/. The purpose of the
+The purpose of the
 device is to regulate the pressure and duration of a puff of compressed air. Typically the output port
 is connected to a glass puffer pipette which has been drawn into a sharp point with a narrow 2.3 diameter pore
 
