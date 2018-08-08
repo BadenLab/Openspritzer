@@ -32,7 +32,7 @@ This repository contains detailed [assembly instructions](https://github.com/Bad
 
 The [bill of material](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/BOM.csv) details all pneumatic, mechanical and elecrtonic components required along with possible supplier URL links. The device is controled by an arduino nano. The [.ino code](https://github.com/BadenLab/Openspritzer/tree/master/Arduino) can be modified and uploaded as many times as you like. The way the Openspritzer code has been constructed allows simple modification of key parameters such as the base unit of time. These are all included at the beginning of the code for ease of reference.
 
-<img align="right" width="200" height="200" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB%20Board.png">
+<img align="right" width="150" height="198" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB%20Board.png">
 
 To simplify the wiring assembly, we have designed a customed [circuit board](https://github.com/BadenLab/Openspritzer/tree/master/PCB). Gerber files can be send to PCB prototype enterprise for production.
 
