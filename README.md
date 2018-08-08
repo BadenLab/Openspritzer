@@ -23,9 +23,34 @@ in the life and physical sciences.
 
 
 ## A DIY opensource microinjector
-Compared to similar commercial systems that can cost up to several thousand pounds, the cost of the fully equiped Openspritzer (~£350) makes it particularly attractive for those wishing to pursue cutting-edge techniaues in low ressource environments.
-The [Bill of Material](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/BOM.csv)
+Compared to similar commercial systems that can cost up to several thousand pounds, the cost of the fully equiped Openspritzer (~£350) makes it
+particularly attractive for those wishing to pursue cutting-edge techniques in low ressource environments.
 
+This repository contains detailed [assembly instructions]https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/supplementary_information_final.pdf and an operation manual for Openspritzer.
+
+The [bill of material](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/BOM.csv) details all pneumatic, mechanical and elecrtonic components required along with possible supplier URL links. The device is controled by an arduino nano. The [.ino code]https://github.com/BadenLab/Openspritzer/tree/master/Arduino can be modified and uploaded as many times as you like. The way the Openspritzer code has been constructed allows simple modification of key parameters such as the base unit of time. These are all included at the beginning of the code for ease of reference.
+
+<img align="right" width="200" height="200" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB%20Board.png">
+To simplify the wiring assembly, we have designed a customed [circuit board]https://github.com/BadenLab/Openspritzer/tree/master/PCB/OpenSpritzer%20v0.02. Gerber files can be send to PCB prototype enterprise for production.
+
+We used [OpenSCAD]http://openscad.org to design the [box and lid]https://github.com/BadenLab/Openspritzer/tree/master/3D%20printing%20files stl files that could be 3D printed to efficiently hold all openspritzer components. The OpenSCAD script is provided. You may have to modify the measurements in the script to comply with the components that you have purchased.
+
+
+
+ The Arduino code and SCAD files for the exterior casing are
+provided and may be downloaded at http://raimondolab.com/Openspritzer/. The purpose of the
+device is to regulate the pressure and duration of a puff of compressed air. Typically the output port
+is connected to a glass puffer pipette which has been drawn into a sharp point with a narrow 2.3 diameter pore
+
+The device consists of a circuit board, a solenoid valve, a pressure regulator with a gauge and
+various interface components. Supplementary Fig. S2 shows the device without the covering lid
+and the solenoid displaced to expose the circuit board. The pressure regulator is mounted on the left
+and attached to the front panel via a retaining threaded ring that comes with the regulator. The
+circuit board is mounted onto attachment points on the floor of the box. It is situated next to the side
+wall containing the electronic interface components. There are two supports on which the solenoid
+can rest above the circuit board and an LED can be attached to a mount-point on the lid. There are
+also several retaining pillars which keep the solenoid in position. The lid has a block attached to it
+which acts to clamp the solenoid down when the box is closed
 
 
 When connected to a standard micro-pipette via suitable pneumatic tubing, the device is capable of
