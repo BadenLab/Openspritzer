@@ -20,10 +20,13 @@ in the life and physical sciences.
 
 - [A £350 DIY opensource microinjector](#a-DIY-opensource-microinjector)
 - [An efficient device that provides the same level of control as commercial systems](#correlating-a-recording-area-into-the-visual-space)
-- [A handy tool for protocol design](#A-handy-tool-for-protocol-design)
+
 
 ## A DIY opensource microinjector
-Compared to similar commercial systems that can cost up to several thousand pounds, The cost of the fully equiped Openspritzer (~£350) makes it particularly attractive for those wishing to pursue cutting-edge techniaues in low ressource environments.
+Compared to similar commercial systems that can cost up to several thousand pounds, the cost of the fully equiped Openspritzer (~£350) makes it particularly attractive for those wishing to pursue cutting-edge techniaues in low ressource environments.
+The [Bill of Material](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/BOM.csv)
+
+
 
 When connected to a standard micro-pipette via suitable pneumatic tubing, the device is capable of
 delivering minute doses of reagents to a wide range of biological and chemical systems.
