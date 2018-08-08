@@ -38,6 +38,8 @@ The device is controled by an arduino nano. The [.ino code](https://github.com/B
 
 To simplify the wiring assembly, we have designed a customed [circuit board](https://github.com/BadenLab/Openspritzer/tree/master/PCB). Gerber files can be send to PCB prototype enterprise for production.
 
+<img align="left" width="200" height="200" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/3d%20print.png">
+
 We used [OpenSCAD](http://openscad.org) to design the [box and lid](https://github.com/BadenLab/Openspritzer/tree/master/3D%20printing%20files) stl files that could be 3D printed to efficiently hold all openspritzer components. The OpenSCAD script is provided. You may have to modify the measurements in the script to comply with the components that you have purchased.
 
 
