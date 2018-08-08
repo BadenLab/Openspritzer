@@ -17,7 +17,7 @@ are prepare to shop around.
 We anticipate that due to its high performance and low cost Openspritzer will be of interest to a broad range of researchers working
 in the life and physical sciences.
 
-
+***
 
 - [A £350 DIY opensource microinjector](#a-DIY-opensource-microinjector)
 - [An efficient device that provides the same level of control as commercial systems](#correlating-a-recording-area-into-the-visual-space)
