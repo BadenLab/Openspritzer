@@ -22,15 +22,13 @@ in the life and physical sciences.
 - [A £350 DIY opensource microinjector](#a-DIY-opensource-microinjector)
 - [An efficient device that provides the same level of control as commercial systems](#correlating-a-recording-area-into-the-visual-space)
 
-
+***
 
 ## A DIY opensource microinjector
 Compared to similar commercial systems that can cost up to several thousand pounds, the cost of the fully equiped Openspritzer (~£350) makes it
 particularly attractive for those wishing to pursue cutting-edge techniques in low ressource environments.
 
-This repository contains detailed [assembly instructions](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/supplementary_information_final.pdf) and an operation manual for Openspritzer.
-
-The [bill of material](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/BOM.csv) details all pneumatic, mechanical and elecrtonic components required along with possible supplier URL links.
+This repository contains detailed [assembly instructions](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/supplementary_information_final.pdf) and an operation manual for Openspritzer. The [bill of material](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/BOM.csv) details all pneumatic, mechanical and electronic components required along with possible supplier URL links.
 
 <img align="right" width="100" height="132" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB%20Board.png">
 
