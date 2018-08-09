@@ -1,7 +1,7 @@
 <p align="right"><img src="https://github.com/BadenLab/Zebrafish-visual-space-model/blob/master/Images/Logo.png" width="300"/>
 <h1 align="center">Openspritzer</h1></p>
-<h3 align="center">An open hardware pressure ejection system for reliably delivering picolitre volumes.
-</h3><p align="center"><h6 align="right">by C.J. Forman, H. Tomes, B. Mbobo, R.J. Burman, M. Jacobs, T Baden &
+<h3 align="center">An open hardware pressure ejection system for reliably delivering picolitre volumes.</h3>
+<p align="center"><h6 align="right">by C.J. Forman, H. Tomes, B. Mbobo, R.J. Burman, M. Jacobs, T Baden &
 J.V. Raimondo</h6>
 <img align="center" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Cover%20Picture2.PNG" width="1000"/>
 </p>
@@ -22,6 +22,7 @@ in the life and physical sciences.
 - [A £350 DIY opensource microinjector](#openspritzer,-a-DIY-opensource-microinjector.)
 - [An efficient device that provides similar level of control as commercial systems](#Openspritzer-rivals-the-performance-of-commercial-systems.)
 - [Openspritzer can deliver neurotransmitters with millisecond precision to control neural activity](#Openspritzer-in-neuroscience-experiments.)
+- [OpenSpritzer is suitable for delivering infectious agents including viral delivery of opsins for optogenetics]
 
 ***
 
@@ -71,13 +72,9 @@ Then, to test the effect of command duration on effective dose delivey, we next 
 
 ***
 
+To demonstrate the utility of Openspritzer we performed multiple example experiments delivering agents ranging in size from single molecules to whole bacteria. Each experiment depended critically on the performance of the device. The spatio-temporal control of reagent delivery affored by Openspritzer is a primary feature of the device.
 
+Furthermore, with the emergence of a plethora of popular new techniques involving genetic manipulation of tissue and organisms, such as optogenetics and CRISPR, the demand for equipment with the functionality of Openspritzer is likely to increase.
 
-
- Second, we used Openspritzer to
-deliver infectious viral and bacterial agents to living tissue. Viral transfection of hippocampal
-interneurons with channelrhodopsin allowed for the optogenetic manipulation of hippocampal
-circuitry with light. Finally, we successfully used Openspritzer to infect organotypic hippocampal
-slice cultures with fluorescent Mycobacterium bovis bacilli. We anticipate that due to its high
-performance and low cost Openspritzer will be of interest to a broad range of researchers working in
-the life and physical sciences.
+We anticipate that due to its high performance and low cost Openspritzer will be of interest to a broad range of researchers working in the life and physical sciences.
+<p align="center"><h6 align="right">Source: [CJ. Forman et al, 2016, Openspritzer: an open hardware pressure ejection system for reliably delivering picolitre volumes.](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/Openspritzer%2C%20an%20open%20hardware%20pressure%20ejection%20system%20for%20reliably%20delivering%20picolitre%20volumes.pdf) </h6>
