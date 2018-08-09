@@ -22,7 +22,7 @@ in the life and physical sciences.
 - [A £350 DIY opensource microinjector](#openspritzer,-a-DIY-opensource-microinjector.)
 - [An efficient device that provides similar level of control as commercial systems](#Openspritzer-rivals-the-performance-of-commercial-systems.)
 - [Openspritzer can deliver neurotransmitters with millisecond precision to control neural activity](#Openspritzer-in-neuroscience-experiments.)
-- [OpenSpritzer is suitable for delivering infectious agents including viral delivery of opsins for optogenetics]
+- [OpenSpritzer is suitable for delivering infectious agents including viral delivery of opsins for optogenetics](#Openspritzer-for-microinjection-of-infectious-agents)
 
 ***
 
@@ -70,6 +70,12 @@ To assess the accuracy of the drug delivery, we applied 10 sweeps where a 20 ms 
 
 Then, to test the effect of command duration on effective dose delivey, we next applied puffs of increasing duration from 10 to 100 ms in 10 ms steps. Here, each additional 10 ms increase in duration produced a clear increase in both EPSP duration and amplitude. These results confirm the reliability and precision of Openspritzer for delivering small doses of an agent to a widely used biological sample in a controlled manner.
 
+
+**
+
+## Openspritzer for microinjection of infectious agents
+
+***
 ***
 
 To demonstrate the utility of Openspritzer we performed multiple example experiments delivering agents ranging in size from single molecules to whole bacteria. Each experiment depended critically on the performance of the device. The spatio-temporal control of reagent delivery affored by Openspritzer is a primary feature of the device.
@@ -77,4 +83,4 @@ To demonstrate the utility of Openspritzer we performed multiple example experim
 Furthermore, with the emergence of a plethora of popular new techniques involving genetic manipulation of tissue and organisms, such as optogenetics and CRISPR, the demand for equipment with the functionality of Openspritzer is likely to increase.
 
 We anticipate that due to its high performance and low cost Openspritzer will be of interest to a broad range of researchers working in the life and physical sciences.
-<p align="center"><h6 align="right">Source: [CJ. Forman et al, 2016, Openspritzer: an open hardware pressure ejection system for reliably delivering picolitre volumes.](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/Openspritzer%2C%20an%20open%20hardware%20pressure%20ejection%20system%20for%20reliably%20delivering%20picolitre%20volumes.pdf) </h6>
+<p align="center"><h6 align="right">Source: [CJ. Forman et al, 2016, Openspritzer: an open hardware pressure ejection system for reliably delivering picolitre volumes](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/Openspritzer%2C%20an%20open%20hardware%20pressure%20ejection%20system%20for%20reliably%20delivering%20picolitre%20volumes.pdf)</h6>
