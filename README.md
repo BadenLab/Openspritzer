@@ -83,4 +83,4 @@ To demonstrate the utility of Openspritzer we performed multiple example experim
 Furthermore, with the emergence of a plethora of popular new techniques involving genetic manipulation of tissue and organisms, such as optogenetics and CRISPR, the demand for equipment with the functionality of Openspritzer is likely to increase.
 
 We anticipate that due to its high performance and low cost Openspritzer will be of interest to a broad range of researchers working in the life and physical sciences.
-<p align="center"><h6 align="right">Source: [CJ. Forman et al, 2016](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/Openspritzer%2C%20an%20open%20hardware%20pressure%20ejection%20system%20for%20reliably%20delivering%20picolitre%20volumes.pdf) </h6>
+<p align="center"><h6 align="right">Source: [CJ. Forman et al, 201](https://www.nature.com/articles/s41598-017-02301-2) </h6>
