@@ -46,7 +46,7 @@ The device is controled by an arduino nano. The [.ino code](https://github.com/B
 
 ## Openspritzer rivals the performance of commercial systems.
 
-<img align="right" width="250" height="250" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Figure2.PNG">
+<img align="right" width="300" height="300" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Figure2.PNG">
 Openspritzer control over dose delivery matches that of a leading commercial alternative.
 
 To directly assess the time precision and reliability of Openspritzer we visualised fluorescent dye puffs from a sharp microelectrode under two-photon microscopy. The images were taken from a puff with a duration of several seconds using a wide area scan (rectangles).
@@ -57,7 +57,7 @@ Fluorescence profiles of different command-duration puffs are shown for Openspri
 
 ## Openspritzer in neuroscience experiments.
 
-<img align="Left" width="220" height="440" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Figure3.png">
+<img align="Left" width="250" height="500" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Figure3.png">
 Openspritzer controls neural activity by delivering neurotransmitters with millisecond precision.
 
 To demonstrate the utility of Openspritzer, we use it in a series of standard neurobiological applications:
