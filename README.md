@@ -71,7 +71,7 @@ To assess the accuracy of the drug delivery, we applied 10 sweeps where a 20 ms 
 Then, to test the effect of command duration on effective dose delivey, we next applied puffs of increasing duration from 10 to 100 ms in 10 ms steps. Here, each additional 10 ms increase in duration produced a clear increase in both EPSP duration and amplitude. These results confirm the reliability and precision of Openspritzer for delivering small doses of an agent to a widely used biological sample in a controlled manner.
 
 
-**
+***
 
 ## Openspritzer for microinjection of infectious agents
 
