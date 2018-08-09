@@ -20,8 +20,8 @@ in the life and physical sciences.
 ***
 
 - [A £350 DIY opensource microinjector](#openspritzer,-a-DIY-opensource-microinjector.)
-- [An efficient device that provides similar level of control as commercial systems](#Openspritzer-control-over-dose-delivery-matches-that-of-a-leading-commercial-alternative.)
-- [Openspritzer can deliver neurotransmitters with millisecond precision to control neural activity](#Openspritzer-controls-neural-activity-by-delivering-neurotransmitters-with-millisecond-precision.)
+- [An efficient device that provides similar level of control as commercial systems](#Openspritzer-rivals-the-performance-of-commercial-systems.)
+- [Openspritzer can deliver neurotransmitters with millisecond precision to control neural activity](#Openspritzer-in-neuroscience-experiments.)
 
 ***
 
@@ -44,18 +44,22 @@ The device is controled by an arduino nano. The [.ino code](https://github.com/B
 
 ***
 
-## Openspritzer control over dose delivery matches that of a leading commercial alternative.
+## Openspritzer rivals the performance of commercial systems.
 
 <img align="right" width="250" height="250" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Figure2.PNG">
+Openspritzer control over dose delivery matches that of a leading commercial alternative.
+
 To directly assess the time precision and reliability of Openspritzer we visualised fluorescent dye puffs from a sharp microelectrode under two-photon microscopy. The images were taken from a puff with a duration of several seconds using a wide area scan (rectangles).
 
 Fluorescence profiles of different command-duration puffs are shown for Openspritzer (green) and Picospritzer, a popular microinjection system(purple), respectively. The same data is shown again in log-log space to highlight details of shorter pulses. Overall, both devices behave in a very similar way in terms of providing effective and near linear control over the total dosage.
 
 ***
 
-## Openspritzer controls neural activity by delivering neurotransmitters with millisecond precision.
+## Openspritzer in neuroscience experiments.
 
-<img align="Left" width="200" height="400" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Figure3.png">
+<img align="Left" width="220" height="440" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Figure3.png">
+Openspritzer controls neural activity by delivering neurotransmitters with millisecond precision.
+
 To demonstrate the utility of Openspritzer, we use it in a series of standard neurobiological applications:
 We delivered precise amounts of glutamate(cyan) and GABA(orange) to hippocampal neurons to elicit time- and dose-precise excitatory and inhibitory responses respectively, while monitoring the voltage response of the recorded neuron in current-clamp mode.
 
