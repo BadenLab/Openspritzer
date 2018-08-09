@@ -19,12 +19,14 @@ in the life and physical sciences.
 
 ***
 
-- [A £350 DIY opensource microinjector](#a-DIY-opensource-microinjector)
-- [An efficient device that provides the same level of control as commercial systems](#correlating-a-recording-area-into-the-visual-space)
+- [A £350 DIY opensource microinjector](#openspritzer,-a-DIY-opensource-microinjector.)
+- [An efficient device that provides similar level of control as commercial systems](#Openspritzer-control-over-dose-delivery-matches-that-of-a-leading-commercial-alternative.)
+- [Openspritzer can deliver neurotransmitters with millisecond precision to control neural activity](#Openspritzer-controls-neural-activity-by-delivering-neurotransmitters-with-millisecond-precision.)
 
 ***
 
-## A DIY opensource microinjector
+## Openspritzer, a DIY opensource microinjector.
+
 Compared to similar commercial systems that can cost up to several thousand pounds, the cost of the fully equiped Openspritzer (~£350) makes it
 particularly attractive for those wishing to pursue cutting-edge techniques in low ressource environments.
 
@@ -32,46 +34,42 @@ This repository contains detailed [assembly instructions](https://github.com/Bad
 
 <img align="right" width="100" height="132" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB%20Board.png">
 
-To simplify the wiring assembly, we have designed a customed [circuit board](https://github.com/BadenLab/Openspritzer/tree/master/PCB). Gerber files can be send to PCB prototype enterprise for production.
+To simplify the wiring assembly, we have designed a customed [circuit board](https://github.com/BadenLab/Openspritzer/tree/master/PCB). PCB prototype enterprise will only need the [Gerber](https://github.com/BadenLab/Openspritzer/tree/master/PCB/OpenSpritzer%20v0.02/gerber) files to be sent to them for production.
 
 <img align="left" width="200" height="200" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/3d%20print.png">
 
-We used [OpenSCAD](http://openscad.org) to design the [box and lid](https://github.com/BadenLab/Openspritzer/tree/master/3D%20printing%20files) stl files that could be 3D printed to efficiently hold all openspritzer components. The OpenSCAD script is provided. You may have to modify the measurements in the script to comply with the components that you have purchased.
+We used [OpenSCAD](http://openscad.org) to design the [box and lid](https://github.com/BadenLab/Openspritzer/tree/master/3D%20printing%20files) .stl files that could be 3D printed to efficiently hold all openspritzer components. You may have to modify the measurements in the script to comply with the components that you have purchased.
 
 The device is controled by an arduino nano. The [.ino code](https://github.com/BadenLab/Openspritzer/tree/master/Arduino) can be modified and uploaded as many times as you like. The way the Openspritzer code has been constructed allows simple modification of key parameters such as the base unit of time. These are all included at the beginning of the code for ease of reference.
 
+***
 
-The purpose of the
-device is to regulate the pressure and duration of a puff of compressed air. Typically the output port
-is connected to a glass puffer pipette which has been drawn into a sharp point with a narrow 2.3 diameter pore
+## Openspritzer control over dose delivery matches that of a leading commercial alternative.
 
-The device consists of a circuit board, a solenoid valve, a pressure regulator with a gauge and
-various interface components. Supplementary Fig. S2 shows the device without the covering lid
-and the solenoid displaced to expose the circuit board. The pressure regulator is mounted on the left
-and attached to the front panel via a retaining threaded ring that comes with the regulator. The
-circuit board is mounted onto attachment points on the floor of the box. It is situated next to the side
-wall containing the electronic interface components. There are two supports on which the solenoid
-can rest above the circuit board and an LED can be attached to a mount-point on the lid. There are
-also several retaining pillars which keep the solenoid in position. The lid has a block attached to it
-which acts to clamp the solenoid down when the box is closed
+<img align="right" width="200" height="200" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Figure2.png">
+To directly assess the time precision and reliability of Openspritzer we visualised fluorescent dye puffs from a sharp microelectrode under two-photon microscopy. The images were taken from a puff with a duration of several seconds using a wide area scan (rectangles).
+Fluorescence profiles of different command-duration puffs are shown for Openspritzer (green) and Picospritzer, a popular microinjection system(purple), respectively. The same data is shown again in log-log space to highlight details of shorter pulses. Overall, both devices behave in a very similar way in terms of providing effective and near linear control over the total dosage.
 
+***
 
-When connected to a standard micro-pipette via suitable pneumatic tubing, the device is capable of
-delivering minute doses of reagents to a wide range of biological and chemical systems.
+## Openspritzer controls neural activity by delivering neurotransmitters with millisecond precision.
 
+<img align="Left" width="100" height="200" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Figure2.png">
+To demonstrate the utility of Openspritzer, we use it in a series of standard neurobiological applications:
+We delivered precise amounts of glutamate(cyan) and GABA(orange) to hippocampal neurons to elicit time- and dose-precise excitatory and inhibitory responses respectively, while monitoring the voltage response of the recorded neuron in current-clamp mode.
 
+20 ms doses of glutamate (100 μM) reliably evoked excitatory postsynaptic potentials (EPSPs) and action potentials. Similarly, action potential activity elicited via somatic current injection could be suppressed by 20 ms puffs of GABA (100 μM).
 
-In this work,
-we characterise the performance of the device and compare it to a popular commercial system using two-photon
-fluorescence microscopy. We found that Openspritzer provides the same level of control over
-delivered reagent dose as the commercial system. Next, we demonstrate the utility of Openspritzer in
-a series of standard neurobiological applications.
+To assess the accuracy of the drug delivery, we applied 10 sweeps where a 20 ms glutamate puff was applied after 500 ms produced almost identical EPSPs demonstrating the precise timing of Openspritzer and highly conserved puff volumes.
+
+Then, to test the effect of command duration on effective dose delivey, we next applied puffs of increasing duration from 10 to 100 ms in 10 ms steps. Here, each additional 10 ms increase in duration produced a clear increase in both EPSP duration and amplitude. These results confirm the reliability and precision of Openspritzer for delivering small doses of an agent to a widely used biological sample in a controlled manner.
+
+***
 
 
 
-First, we used Openspritzer to deliver precise
-amounts of the neurotransmitters glutamate and GABA to hippocampal neurons to elicit time- and
-dose-precise excitatory and inhibitory responses, respectively. Second, we used Openspritzer to
+
+ Second, we used Openspritzer to
 deliver infectious viral and bacterial agents to living tissue. Viral transfection of hippocampal
 interneurons with channelrhodopsin allowed for the optogenetic manipulation of hippocampal
 circuitry with light. Finally, we successfully used Openspritzer to infect organotypic hippocampal
