@@ -1,4 +1,4 @@
-<p align="right"><img src="https://github.com/BadenLab/Zebrafish-visual-space-model/blob/master/Images/Logo.png" width="300"/>
+﻿<p align="right"><img src="https://github.com/BadenLab/Zebrafish-visual-space-model/blob/master/Images/Logo.png" width="300"/>
 <h1 align="center">Openspritzer</h1></p>
 <h3 align="center">An open hardware pressure ejection system for reliably delivering picolitre volumes.</h3>
 <p align="center"><h6 align="right">by C.J. Forman, H. Tomes, B. Mbobo, R.J. Burman, M. Jacobs, T Baden &
@@ -33,7 +33,7 @@ particularly attractive for those wishing to pursue cutting-edge techniques in l
 
 This repository contains detailed [assembly instructions](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/supplementary_information_final.pdf) and an operation manual for Openspritzer. The [bill of material](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/BOM.csv) details all pneumatic, mechanical and electronic components required along with possible supplier URL links.
 
-<img align="right" width="100" height="132" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB%20Board.png">
+<img align="right" width="150" height="150" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB%20Board.png">
 
 To simplify the wiring assembly, we have designed a customed [circuit board](https://github.com/BadenLab/Openspritzer/tree/master/PCB). PCB prototype enterprise will only need the [Gerber](https://github.com/BadenLab/Openspritzer/tree/master/PCB/OpenSpritzer%20v0.02/gerber) files to be sent to them for production.
 
