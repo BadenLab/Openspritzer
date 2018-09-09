@@ -1,6 +1,7 @@
 Smoothness = 20;
 tol = 0.15;
 Wall = 2;
+TOL = 1;
 
 
 
@@ -11,8 +12,8 @@ Wall = 2;
 
 Puffer = 1;
 
-Regulator = 1;
-Solenoid = 1;
+Regulator = 10;
+Solenoid = 10;
 PCB = 1;
 
 // // // // // // // // // // // // //
@@ -23,6 +24,7 @@ PCB = 1;
 r_M3 = 3/2; //M3 screw radius 
 r_M3_nut = 6/2; //M3 nut radius
 h_M3_nut = Wall; //M3 nut heigh
+r_M6 = 6/2; //M6 screw radius
 
 //Regulator- measurements taken from the regulator
 x_Reg = 50.1;
@@ -43,13 +45,24 @@ SolRetOffsetX = 6.5;
 SolShelfDepth = 4;
 
 //PCB - measurements taken from the PBC footprint.
-x_PCB = 32.5;
-y_PCB = 66;
-z_PCB = 1;
+x_PCB = 75;
+y_PCB = 62.5;
+z_PCB = 2;
+pos_z_PCB = 25;
+
+// DPDT switch
+pos_y_DPDT = 20;
+h_DPDT = 9.14/2+0.51;
+r_DPDT = 4.75/2;
+
+// Potentiometer
+pos_y_Pot = 41.25;
+h_Pot = 1;
+r_Pot = 2;
 
 
-x_Box = 100;
-y_Box = y_Sol + 2*Wall + 2*(r_M3+Wall/2);
+x_Box = 75+2*TOL;
+y_Box = 125 +2*TOL;
 z_Box = z_Reg + Wall;
 h_Screw = 5;
 
@@ -65,35 +78,48 @@ SolRetHeight = SolShelfHeight + z_Sol;
 
 
 
+screw01 = [-x_Box/2+2*Wall,-y_Box/2+2*Wall,h_M3_nut];
+screw02 = [-x_Box/2+2*Wall,y_Box/2+2*Wall,h_M3_nut];
+screw03 = [x_Box/2+2*Wall,-y_Box/2+2*Wall,h_M3_nut];
+screw04 = [x_Box/2+2*Wall,y_Box/2+2*Wall,Wall];
+
+
 module Box(){
     difference(){
         minkowski(){
-            translate([-x_Box/2+Wall,-y_Box/2+Wall,0])cube([x_Box-2*Wall,y_Box-2*Wall,z_Box-Wall]);
+            translate([-x_Box/2+Wall,-y_Box/2+Wall,0])cube([x_Box+2*Wall,y_Box+2*Wall,z_Box-Wall]);
             cylinder(r1=Wall, h=Wall, $fn=Smoothness);
         }
+                    
+        // DPDT
+        translate([x_Box/2+2*Wall-TOL,-y_Box/2+2*Wall+TOL+pos_y_DPDT,pos_z_PCB+h_DPDT])rotate([0,90,0])cylinder(r=r_DPDT,h=2*Wall+TOL,$fn=Smoothness);
         
-        difference(){
-            minkowski(){
-                translate([-x_Box/2+2*Wall,-y_Box/2+2*Wall,Wall])cube([x_Box-4*Wall,y_Box-4*Wall,z_Box-2*Wall]);
-                cylinder(r1=Wall, r2=Wall, h=Wall, $fn=Smoothness);
-            }
-            // Regulator Spacer
-            translate([-x_Box/2 + Wall + x_Reg, RegYPosition + RegSpacerDepth/2, Wall/2+z_Box/2]) cube([RegSpacerWidth, RegSpacerDepth, z_Box - Wall], true);
-
-            // Solenoid Shelf Back
-            translate([x_Box/2 - Wall - x_Sol/2, SolYPosition + SolShelfDepth/2,Wall + SolShelfHeight/2]) cube([x_Sol, SolShelfDepth, SolShelfHeight], true);
+        // Potentiometer
+        translate([x_Box/2+2*Wall-TOL,-y_Box/2+2*Wall+TOL+pos_y_Pot,pos_z_PCB+h_Pot])rotate([0,90,0])cylinder(r=r_Pot
+        ,h=2*Wall+TOL,$fn=Smoothness);        
         
-            // Solenoid rear Retainer
-            translate([x_Box/2 - Wall - x_Sol - x_SolRet/2, SolYPosition + SolShelfDepth/2,Wall + SolRetHeight/2]) cube([x_SolRet, SolShelfDepth, SolRetHeight], true);
+        difference(){translate([-x_Box/2+2*Wall,-y_Box/2+2*Wall,Wall])cube([x_Box,y_Box,z_Box]);
+           
+            
 
-            // Solenoid Shelf Front
-            translate([x_Box/2 - Wall - x_Sol/2, SolYPosition + y_SolBody - SolShelfDepth/2, Wall + SolShelfHeight/2]) cube([x_Sol, SolShelfDepth, SolShelfHeight], true);
+            
+//            // Regulator Spacer
+//            #translate([-x_Box/2 + Wall + x_Reg, RegYPosition + RegSpacerDepth/2, Wall/2+z_Box/2]) cube([RegSpacerWidth, RegSpacerDepth, z_Box - Wall], true);
 
-            // Solenoid Front Retainer1
-            translate([x_Box/2 - Wall - x_Sol - x_SolRet/2 + SolRetOffsetX, SolYPosition + y_SolBody + x_SolRet/2,Wall + SolRetHeight/2]) cube([x_SolRet , x_SolRet, SolRetHeight], true);
+//            // Solenoid Shelf Back
+//            translate([x_Box/2 - Wall - x_Sol/2, SolYPosition + SolShelfDepth/2,Wall + SolShelfHeight/2]) cube([x_Sol, SolShelfDepth, SolShelfHeight], true);
         
-            // Solenoid Front Retainer2
-            translate([x_Box/2 - Wall - x_Sol - x_SolRet/2, SolYPosition + y_SolBody - SolShelfDepth/2, Wall + SolRetHeight/2]) cube([x_SolRet, SolShelfDepth, SolRetHeight], true);
+//            // Solenoid rear Retainer
+//            translate([x_Box/2 - Wall - x_Sol - x_SolRet/2, SolYPosition + SolShelfDepth/2,Wall + SolRetHeight/2]) cube([x_SolRet, SolShelfDepth, SolRetHeight], true);
+//
+//            // Solenoid Shelf Front
+//            translate([x_Box/2 - Wall - x_Sol/2, SolYPosition + y_SolBody - SolShelfDepth/2, Wall + SolShelfHeight/2]) cube([x_Sol, SolShelfDepth, SolShelfHeight], true);
+
+//            // Solenoid Front Retainer1
+//            translate([x_Box/2 - Wall - x_Sol - x_SolRet/2 + SolRetOffsetX, SolYPosition + y_SolBody + x_SolRet/2,Wall + SolRetHeight/2]) cube([x_SolRet , x_SolRet, SolRetHeight], true);
+//        
+//            // Solenoid Front Retainer2
+//            translate([x_Box/2 - Wall - x_Sol - x_SolRet/2, SolYPosition + y_SolBody - SolShelfDepth/2, Wall + SolRetHeight/2]) cube([x_SolRet, SolShelfDepth, SolRetHeight], true);
         
 //            // MountingPoints 
 //            // Rear Right
@@ -117,32 +143,39 @@ module Box(){
 //        cube([PowerJackSupportDepth, PowerJackWidth, Thickness], true);
     }
         
-        translate([-x_Box/2+2*Wall,-y_Box/2+2*Wall,0])cylinder(r=r_M3_nut+tol,h=h_M3_nut,$fn=6);
-        translate([-x_Box/2+2*Wall,y_Box/2-2*Wall,0])cylinder(r=r_M3_nut+tol,h=h_M3_nut,$fn=6);
-        translate([x_Box/2-2*Wall,-y_Box/2+2*Wall,0])cylinder(r=r_M3_nut+tol,h=h_M3_nut,$fn=6);
-        translate([x_Box/2-2*Wall,y_Box/2-2*Wall,0])cylinder(r=r_M3_nut+tol,h=h_M3_nut,$fn=6);
+        translate(screw01-[0,0,h_M3_nut])cylinder(r=r_M3_nut+tol,h=h_M3_nut,$fn=6);
+        translate(screw02-[0,0,h_M3_nut])cylinder(r=r_M3_nut+tol,h=h_M3_nut,$fn=6);
+        translate(screw03-[0,0,h_M3_nut])cylinder(r=r_M3_nut+tol,h=h_M3_nut,$fn=6);
+        translate(screw04-[0,0,h_M3_nut])cylinder(r=r_M3_nut+tol,h=h_M3_nut,$fn=6);
+    
+        translate(screw01)cylinder(r=r_M3+tol,h=z_Box,$fn=Smoothness);
+        translate(screw02)cylinder(r=r_M3+tol,h=z_Box,$fn=Smoothness);
+        translate(screw03)cylinder(r=r_M3+tol,h=z_Box,$fn=Smoothness);
+        translate(screw04)cylinder(r=r_M3+tol,h=z_Box,$fn=Smoothness);
         
-        PCB();
+        //PCB();
     }
 }
+
 
 module Screw(){
     difference(){
         union(){
-            translate([-x_Box/2+2*Wall,-y_Box/2+2*Wall,h_M3_nut])cylinder(r=r_M3+Wall/2,h=z_Box-h_M3_nut,$fn=Smoothness);
-            translate([-x_Box/2+2*Wall,y_Box/2-2*Wall,h_M3_nut])cylinder(r=r_M3+Wall/2,h=z_Box-h_M3_nut,$fn=Smoothness);
-            translate([x_Box/2-2*Wall,-y_Box/2+2*Wall,h_M3_nut])cylinder(r=r_M3+Wall/2,h=z_Box-h_M3_nut,$fn=Smoothness);
-            translate([x_Box/2-2*Wall,y_Box/2-2*Wall,h_M3_nut])cylinder(r=r_M3+Wall/2,h=z_Box-h_M3_nut,$fn=Smoothness);
-            translate([-x_Box/2+2*Wall,-y_Box/2+2*Wall,Wall])cylinder(r1=r_M3+Wall,r2=r_M3+Wall/2,h=4*Wall,$fn=Smoothness);
-            translate([-x_Box/2+2*Wall,y_Box/2-2*Wall,Wall])cylinder(r1=r_M3+Wall,r2=r_M3+Wall/2,h=4*Wall,$fn=Smoothness);
-            translate([x_Box/2-2*Wall,-y_Box/2+2*Wall,Wall])cylinder(r1=r_M3+Wall,r2=r_M3+Wall/2,h=4*Wall,$fn=Smoothness);
-            translate([x_Box/2-2*Wall,y_Box/2-2*Wall,Wall])cylinder(r1=r_M3+Wall,r2=r_M3+Wall/2,h=4*Wall,$fn=Smoothness);
+            translate(screw01)cylinder(r=r_M3+Wall/2,h=z_Box-h_M3_nut,$fn=Smoothness);
+            translate(screw02)cylinder(r=r_M3+Wall/2,h=z_Box-h_M3_nut,$fn=Smoothness);
+            translate(screw03)cylinder(r=r_M3+Wall/2,h=z_Box-h_M3_nut,$fn=Smoothness);
+            translate(screw04)cylinder(r=r_M3+Wall/2,h=z_Box-h_M3_nut,$fn=Smoothness);
+            
+            translate(screw01)cylinder(r1=r_M3+Wall,r2=r_M3+Wall/2,h=4*Wall,$fn=Smoothness);
+            translate(screw02)cylinder(r1=r_M3+Wall,r2=r_M3+Wall/2,h=4*Wall,$fn=Smoothness);
+            translate(screw03)cylinder(r1=r_M3+Wall,r2=r_M3+Wall/2,h=4*Wall,$fn=Smoothness);
+            translate(screw04)cylinder(r1=r_M3+Wall,r2=r_M3+Wall/2,h=4*Wall,$fn=Smoothness);
         }
         
-        translate([-x_Box/2+2*Wall,-y_Box/2+2*Wall,0])cylinder(r=r_M3+tol,h=z_Box,$fn=Smoothness);
-        translate([-x_Box/2+2*Wall,y_Box/2-2*Wall,0])cylinder(r=r_M3+tol,h=z_Box,$fn=Smoothness);
-        translate([x_Box/2-2*Wall,-y_Box/2+2*Wall,0])cylinder(r=r_M3+tol,h=z_Box,$fn=Smoothness);
-        translate([x_Box/2-2*Wall,y_Box/2-2*Wall,0])cylinder(r=r_M3+tol,h=z_Box,$fn=Smoothness);
+        translate(screw01)cylinder(r=r_M3+tol,h=z_Box,$fn=Smoothness);
+        translate(screw02)cylinder(r=r_M3+tol,h=z_Box,$fn=Smoothness);
+        translate(screw03)cylinder(r=r_M3+tol,h=z_Box,$fn=Smoothness);
+        translate(screw04)cylinder(r=r_M3+tol,h=z_Box,$fn=Smoothness);
     }
 }
 
@@ -164,9 +197,14 @@ module Solenoid(){
 if (Solenoid==1)Solenoid();
     
 module PCB(){
-    color([1,0,1])translate([15.1-5,-39,Wall+h_Screw])cube([x_PCB+2*tol+5,y_PCB+10*tol,z_PCB+5*tol]);
+    color([0.5,1,0.5])translate([-x_Box/2+2*Wall+TOL,-y_Box/2+2*Wall+TOL,pos_z_PCB-z_PCB])difference(){
+        cube([x_PCB+2*tol,y_PCB+2*tol,z_PCB]);
+        cylinder(r=r_M6,h=z_PCB,$fn=Smoothness);
+        translate([x_PCB+2*tol,0,0])cylinder(r=r_M6,h=z_PCB,$fn=Smoothness);
+        
+    }
 }
-if (PCB==10)PCB();
+if (PCB==1)PCB();
     
 
 
