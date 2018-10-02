@@ -184,7 +184,7 @@ module PicoSpritz_sub() {
     //translate([XLen/2 - Thickness - SolWidth - SolRetWidth/2 + SolRetOffsetX, SolYPosition + SolBodyLength + SolRetWidth/2, LidOffset - SolRetHeight/2 - Thickness/2]) cube([SolRetWidth , SolRetWidth, SolRetHeight], true);
     
     // Regulator Hole
-    translate([-XLen/2 + Thickness + RegWidth/2, YLen/2 - Thickness/2, -ZLen/2 + Thickness + RegHeight/2])
+    #translate([-XLen/2 + Thickness + RegWidth/2, YLen/2 - Thickness/2, -ZLen/2 + Thickness + RegHeight/2])
     rotate(90, [1, 0, 0])
     cylinder(2*CollarHeight, RegKnobDiam/2, RegKnobDiam/2, $fn=Smoothness, true);
     
@@ -251,11 +251,24 @@ module PicoSpritz_sub() {
         cube([Thickness, BNCDiam, BNCDiam/4], $fn=Smoothness, true);        
     }    
     
+    
+    
+    
+    
+    
+    
     // miniUSB Hole
     translate([XLen/2 - Thickness/2, USBYPosition, -ZLen/2 + Thickness + MountPointHeight + USBZOffset + USBHeight/4] ) 
     cube([Thickness, USBWidth, USBHeight/2], true);
     translate([XLen/2 - Thickness/2, USBYPosition, -ZLen/2 + Thickness + MountPointHeight + USBZOffset - USBHeight/4] ) 
     cube([Thickness, USBWidth2, USBHeight/2], true);
+    
+    
+    
+    
+    
+    
+    
 
     // powerJackHole
     translate([XLen/2 - Thickness/2, PowerJackYPosition, -ZLen/2 + Thickness + MountPointHeight + USBZOffset ] ) 
