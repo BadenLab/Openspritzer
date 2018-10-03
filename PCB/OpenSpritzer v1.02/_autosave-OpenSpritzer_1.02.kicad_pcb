@@ -3136,7 +3136,7 @@
   (gr_text "by AM Chagas & MJY Zimmermann\nReleased under CERN OHL v1.2" (at 115.175 85.55) (layer F.SilkS)
     (effects (font (size 1.25 1.25) (thickness 0.125)) (justify left))
   )
-  (gr_text "Source:\nhttps://open-labware.net/projects/openspritzer" (at 115.125 89.85) (layer F.SilkS)
+  (gr_text "Source:\nhttps://open-labware.net/projects/openspritzer" (at 115.125 90.325) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.125)) (justify left))
   )
   (gr_text "OpenSpritzer v1.02\n\n" (at 126.8 80.95) (layer F.SilkS)
