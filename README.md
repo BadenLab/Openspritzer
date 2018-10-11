@@ -33,11 +33,11 @@ particularly attractive for those wishing to pursue cutting-edge techniques in l
 
 This repository contains detailed [assembly instructions](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/supplementary_information_final.pdf) and an operation manual for Openspritzer. The [bill of material](https://github.com/BadenLab/Openspritzer/blob/master/BOM.csv) details all pneumatic, mechanical and electronic components required along with possible supplier URL links.
 
-<img align="right" width="150" height="150" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB%20Board.png">
+<img align="right" width="150" height="200" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB%20Board.png">
 
 To simplify the wiring assembly, we have designed a customed [circuit board](https://github.com/BadenLab/Openspritzer/tree/master/PCB). PCB prototype enterprise will only need the [Gerber](https://github.com/BadenLab/Openspritzer/tree/master/PCB/OpenSpritzer%20v0.02/gerber) files to be sent to them for production.
 
-<img align="left" width="200" height="200" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/3d%20print.png">
+<img align="left" width="250" height="200" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/3d%20print.png">
 
 We used [OpenSCAD](http://openscad.org) to design [3D files](https://github.com/BadenLab/Openspritzer/tree/master/3D%20printing%20files) that could be printed to efficiently hold all openspritzer components. You may have to modify the measurements in the script to comply with the components that you have purchased.
 
