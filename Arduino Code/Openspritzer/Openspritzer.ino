@@ -12,7 +12,7 @@ const int NUM_PROGRAMMED_PULSES = 28; // number of pulses to implement in hard c
 int PROGRAMMED_SEQUENCE[28] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000}; // sequence of pulses in ms
 const int PROGRAMMED_PULSE_DELAY = 2000; // delay between pulses.
 const int MONITOR_FOOTSWITCH_PERIOD =400; // seems long enough for a double click. Can get a triple in there too.
-const int FOOTBUTTONDELAY = 1000; // liberally dispersed throughout the code to give time for people to release the button.
+const int FOOTBUTTONDELAY = 1500; // liberally dispersed throughout the code to give time for people to release the button.
 
 
 // Set up the pins
