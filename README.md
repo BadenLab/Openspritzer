@@ -21,7 +21,7 @@ in the life and physical sciences.
 
 - [A £350 DIY opensource microinjector](#openspritzer,-a-DIY-opensource-microinjector.)
 - [An efficient device that provides similar level of control as commercial systems](#Openspritzer-rivals-the-performance-of-commercial-systems.)
-- [Openspritzer can deliver neurotransmitters with millisecond precision to control neural activity](#Openspritzer-in-neuroscience-experiments.)
+- [OpenSpritzer can deliver neurotransmitters with millisecond precision to control neural activity](#Openspritzer-in-neuroscience-experiments.)
 - [OpenSpritzer is suitable for delivering infectious agents including viral delivery of opsins for optogenetics](#Openspritzer-for-microinjection-of-infectious-agents)
 
 ***
@@ -31,7 +31,7 @@ in the life and physical sciences.
 Compared to similar commercial systems that can cost up to several thousand pounds, the cost of the fully equiped Openspritzer (~£350) makes it
 particularly attractive for those wishing to pursue cutting-edge techniques in low ressource environments.
 
-This repository contains detailed [assembly instructions](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/supplementary_information_final.pdf) and an operation manual for Openspritzer. The [bill of material](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/BOM.csv) details all pneumatic, mechanical and electronic components required along with possible supplier URL links.
+This repository contains detailed [assembly instructions](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/supplementary_information_final.pdf) and an operation manual for Openspritzer. The [bill of material](https://github.com/BadenLab/Openspritzer/blob/master/BOM.csv) details all pneumatic, mechanical and electronic components required along with possible supplier URL links.
 
 <img align="right" width="150" height="150" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB%20Board.png">
 
