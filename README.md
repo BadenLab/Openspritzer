@@ -39,7 +39,7 @@ To simplify the wiring assembly, we have designed a customed [circuit board](htt
 
 <img align="left" width="200" height="200" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/3d%20print.png">
 
-We used [OpenSCAD](http://openscad.org) to design the [box and lid](https://github.com/BadenLab/Openspritzer/tree/master/3D%20printing%20files) .stl files that could be 3D printed to efficiently hold all openspritzer components. You may have to modify the measurements in the script to comply with the components that you have purchased.
+We used [OpenSCAD](http://openscad.org) to design [3D files](https://github.com/BadenLab/Openspritzer/tree/master/3D%20printing%20files) that could be printed to efficiently hold all openspritzer components. You may have to modify the measurements in the script to comply with the components that you have purchased.
 
 The device is controled by an arduino nano. The [.ino code](https://github.com/BadenLab/Openspritzer/tree/master/Arduino) can be modified and uploaded as many times as you like. The way the Openspritzer code has been constructed allows simple modification of key parameters such as the base unit of time. These are all included at the beginning of the code for ease of reference.
 
@@ -70,11 +70,6 @@ To assess the accuracy of the drug delivery, we applied 10 sweeps where a 20 ms 
 
 Then, to test the effect of command duration on effective dose delivey, we next applied puffs of increasing duration from 10 to 100 ms in 10 ms steps. Here, each additional 10 ms increase in duration produced a clear increase in both EPSP duration and amplitude. These results confirm the reliability and precision of Openspritzer for delivering small doses of an agent to a widely used biological sample in a controlled manner.
 
-
-***
-
-## Openspritzer for microinjection of infectious agents
-
 ***
 ***
 
@@ -83,4 +78,4 @@ To demonstrate the utility of Openspritzer we performed multiple example experim
 Furthermore, with the emergence of a plethora of popular new techniques involving genetic manipulation of tissue and organisms, such as optogenetics and CRISPR, the demand for equipment with the functionality of Openspritzer is likely to increase.
 
 We anticipate that due to its high performance and low cost Openspritzer will be of interest to a broad range of researchers working in the life and physical sciences.
-<p align="center"><h6 align="right">Source: [CJ. Forman et al, 201](https://www.nature.com/articles/s41598-017-02301-2) </h6>
+<p align="center"><h6 align="right">Source: [CJ. Forman et al, 201 -- ]https://www.nature.com/articles/s41598-017-02301-2   </h6>
