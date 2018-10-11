@@ -37,7 +37,7 @@ This repository contains detailed [assembly instructions](https://github.com/Bad
 
 To simplify the wiring assembly, we have designed a customed [circuit board](https://github.com/BadenLab/Openspritzer/tree/master/PCB). PCB prototype enterprise will only need the [Gerber](https://github.com/BadenLab/Openspritzer/tree/master/PCB/OpenSpritzer%20v0.02/gerber) files to be sent to them for production.
 
-<img align="left" width="300" height="200" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/3d%20print.png">
+<img align="left" width="275" height="200" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/3d%20print.png">
 
 We used [OpenSCAD](http://openscad.org) to design [3D files](https://github.com/BadenLab/Openspritzer/tree/master/3D%20printing%20files) that could be printed to efficiently hold all openspritzer components. You may have to modify the measurements in the script to comply with the components that you have purchased.
 
