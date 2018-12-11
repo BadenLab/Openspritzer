@@ -1,13 +1,13 @@
 /* 
 
 
-        OpenSpritzer v1.2, an open hardware pressure ejection system.
+        OpenSpritzer v1.3, an open hardware pressure ejection system.
 
 This 3D file is designed for the OpenSpritzer project components and its customed PCB
 Source : https://github.com/BadenLab/Openspritzer
 This project is Open Source licensed, released under CERN OHL v1.2
 
-by M.J.Y. Zimmermann, 2018.10.10
+by M.J.Y. Zimmermann, 2018.12.11
 Baden Lab, CRPC, School of Life Sciences, University of Sussex, United Kingdom
 
                                                                                      */
@@ -18,12 +18,12 @@ Baden Lab, CRPC, School of Life Sciences, University of Sussex, United Kingdom
 /*                            ---  User Parameters  ---                             */
  
 Wall = 2;           // Defines the wall thickness of the box
-Smoothness = 20;    // Number of facets
+Smoothness = 30;    // Number of facets
 tol = 0.1;          // Printing tolerance
 TOL = 0.4;          // Component tolerance
 
-sep = 0;            // x & y separation values for display function
-zsep = 0;           // z separation values for display function
+sep = 5;            // x & y separation values for display function
+zsep = 5;           // z separation values for display function
 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 // // // // // // // // // // // // // // // // // // // // // // // // // // // //
@@ -36,13 +36,13 @@ Front =   1;        // Front Part of the box
 Back =    1;        // Back Part of the box
 Right =   1;        // Right Part of the box
 Left =    1;        // Left Part of the box
-Lid =     10;        // Top Part of the box
+Lid =     1;        // Top Part of the box
 
 
 // Display part used for visualisation
-Regulator = 1;     // Pressure Regulator
-Solenoid = 1;      // Pressure Solenoid
-PCB = 1;           // Custumed Printed Circuit Board
+Regulator = 10;     // Pressure Regulator
+Solenoid = 10;      // Pressure Solenoid
+PCB = 10;           // Custumed Printed Circuit Board
 
 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // //
@@ -51,8 +51,8 @@ PCB = 1;           // Custumed Printed Circuit Board
 
 //Hardware measurements
 r_M3 = 3/2; //M3 screw radius 
-r_M3_nut = 6/2; //M3 nut radius
-h_M3_nut = Wall; //M3 nut heigh
+r_M3_nut = 6.25/2; //M3 nut radius
+h_M3_nut = 2.35; //M3 nut heigh
 r_M6 = 6/2; //M6 screw radius
 
 //Regulator- measurements taken from the regulator
@@ -130,6 +130,10 @@ USBWidth = 7.65 + 2*tol;
 USBWidth2 = 6.75 + 2*tol;
 pos_z_USB = 8.51+4.1+1.57;
 
+// Power Switch
+x_Switch = 14;
+y_Switch = 20;
+
 // PCB holder screw positions
 screw01 = [-x_Box/2+2*Wall,-y_Box/2+2*Wall,h_M3_nut];
 screw02 = [-x_Box/2+2*Wall,y_Box/2+2*Wall,h_M3_nut];
@@ -192,6 +196,7 @@ if(Lid==1){translate([0,0,3*zsep+tol]){
         Title();
         Screw_hole();
         Regulator();
+        Power_Switch();
     }
     difference(){
         Box();
@@ -260,15 +265,16 @@ module Puffer(){
     Screw();
 }
 module Screw_Nuts(){
-    translate(screw01-[0,0,h_M3_nut])cylinder(r=r_M3_nut+tol,h=h_M3_nut,$fn=6);
-    translate(screw02-[0,0,h_M3_nut])cylinder(r=r_M3_nut+tol,h=h_M3_nut,$fn=6);
-    translate(screw03-[0,0,h_M3_nut])cylinder(r=r_M3_nut+tol,h=h_M3_nut,$fn=6);
-    translate(screw04-[0,0,h_M3_nut])cylinder(r=r_M3_nut+tol,h=h_M3_nut,$fn=6); 
+    translate(screw01-[0,0,h_M3_nut])cylinder(r=r_M3_nut+tol,h=h_M3_nut+Wall,$fn=6);
+    translate(screw02-[0,0,h_M3_nut])cylinder(r=r_M3_nut+tol,h=h_M3_nut+Wall,$fn=6);
+    translate(screw03-[0,0,h_M3_nut])cylinder(r=r_M3_nut+tol,h=h_M3_nut+Wall,$fn=6);
+    translate(screw04-[0,0,h_M3_nut])cylinder(r=r_M3_nut+tol,h=h_M3_nut+Wall,$fn=6); 
 }
 module Platform_Holder(){
     difference(){
         cylinder(r1=r_Platform+Wall,r2=r_Platform,h=h_Platform,$fn=Smoothness);
         cylinder(r=r_M3+tol,h=h_Platform,$fn=Smoothness);
+        cylinder(r=r_M3_nut+tol,h=h_M3_nut+Wall,$fn=6);
     }
 }
 module PCB_Screw(){
@@ -321,7 +327,7 @@ module Top_negative(){
 }
 
 module LED(){
-    translate([31,-48.5,z_Box-Wall-tol])cylinder(r=r_LED,h=Wall+tol,$fn=Smoothness);  
+    translate([35.75,-48.5,z_Box-Wall-tol])cylinder(r=r_LED,h=Wall+tol,$fn=Smoothness);  
 }
 module Logo(){
     translate([x_Box/2+2.5,-20,z_Box-Wall/2])rotate([0,0,90])scale([0.75,0.75,1])scale([0.175,0.175,1])import("C:/Users/Maxime/Documents/GitHub/Openspritzer/3D Printing Files/v1.3 - Customed PCB/Badenlab_logo.stl");
@@ -345,6 +351,9 @@ module Labels(){
     
     translate([-x_Box/2+Wall,6,z_Box/2+3])rotate([90,0,-90])linear_extrude(h=Wall/2)text("Power in",size=3);
     translate([-x_Box/2+Wall,2,z_Box/2+-0.5])rotate([90,0,-90])linear_extrude(h=Wall/2)text("24V",size=3);
+}
+module Power_Switch(){
+    translate([-x_Box/2+x_Switch/2,y_Box/2-y_Switch,z_Box-Wall])cube([x_Switch+2*tol,y_Switch+2*tol,2*Wall]);
 }
 
 // // // // // // // // // // // // Compartimentation Modules // // // // // // // // // // // //
