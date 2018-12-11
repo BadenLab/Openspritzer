@@ -18,7 +18,7 @@ Baden Lab, CRPC, School of Life Sciences, University of Sussex, United Kingdom
 /*                            ---  User Parameters  ---                             */
  
 Wall = 2;           // Defines the wall thickness of the box
-Smoothness = 30;    // Number of facets
+Smoothness = 360;    // Number of facets
 tol = 0.1;          // Printing tolerance
 TOL = 0.4;          // Component tolerance
 
@@ -254,8 +254,10 @@ module Box(){
         
         Screw_Nuts();
         Screw_hole();
+        Screw_PCB();
     }      
         PCB_Screw();
+    
 }
 module Puffer(){
     difference(){
@@ -282,6 +284,12 @@ module PCB_Screw(){
     translate([pos_x_Platform1,pos_y_Platform2,0])Platform_Holder();
     translate([pos_x_Platform2,pos_y_Platform1,0])Platform_Holder();
     translate([pos_x_Platform2,pos_y_Platform2,0])Platform_Holder();    
+}
+module Screw_PCB(){
+    translate([pos_x_Platform1,pos_y_Platform1,0])cylinder(r=r_M3_nut+tol,h=h_M3_nut+Wall,$fn=6);
+    translate([pos_x_Platform1,pos_y_Platform2,0])cylinder(r=r_M3_nut+tol,h=h_M3_nut+Wall,$fn=6);
+    translate([pos_x_Platform2,pos_y_Platform1,0])cylinder(r=r_M3_nut+tol,h=h_M3_nut+Wall,$fn=6);
+    translate([pos_x_Platform2,pos_y_Platform2,0])cylinder(r=r_M3_nut+tol,h=h_M3_nut+Wall,$fn=6);    
 }
 module Screw_hole(){
     translate(screw01)cylinder(r=r_M3+tol,h=z_Box,$fn=Smoothness);
