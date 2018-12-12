@@ -51,7 +51,7 @@ PCB = 10;           // Custumed Printed Circuit Board
 
 //Hardware measurements
 r_M3 = 3/2; //M3 screw radius 
-r_M3_nut = 6.25/2; //M3 nut radius
+r_M3_nut = 6.3/2; //M3 nut radius
 h_M3_nut = 2.35; //M3 nut heigh
 r_M6 = 6/2; //M6 screw radius
 
@@ -65,7 +65,7 @@ pos_z_Reg = 2 + r_RegKnob;
 r_Gauge = 40/2;
 GaugexOffset = (13.2 + 22.72)/2 +.3;
 GaugeDiameter = 9.8/2 + tol;
-AirHoseInxOffset = (36.95 + 48.05)/2 + .4;
+AirHoseInxOffset = (36.95 + 48.05)/2 + .4-4.5;
 r_AirHoseIn = (13.3)/2 + tol;
 x_RegStop = 5;
 
@@ -224,7 +224,7 @@ module Box(){
 
         difference(){
             translate([-x_Box/2+2*Wall,-y_Box/2+2*Wall,Wall])cube([x_Box,y_Box,z_Box]);
-            translate([x_Box/2+2*Wall-x_RegStop,y_Box/2-y_Reg+2*Wall-TOL,Wall])cube([x_RegStop,x_RegStop,h_Platform]);
+            //translate([x_Box/2+2*Wall-x_RegStop,y_Box/2-y_Reg+2*Wall-TOL,Wall])cube([x_RegStop,x_RegStop,h_Platform]);
         }
         
         Labels()        
@@ -355,7 +355,7 @@ module Labels(){
     translate([x_Box/2+3*Wall,-y_Box/2+26,z_Box/2-5])rotate([90,0,0])rotate([0,90,0])linear_extrude(h=Wall/2)text("TTL",size=3);
     translate([x_Box/2+3*Wall,-y_Box/2+2,z_Box/2-5])rotate([90,0,0])rotate([0,90,0])linear_extrude(h=Wall/2)text("Foot Pedal",size=3);
     
-    translate([3,y_Box/2+4*Wall-Wall,z_Box/2+8])rotate([90,0,180])linear_extrude(h=Wall/2)text("Air in",size=3);
+    translate([3+4.5,y_Box/2+4*Wall-Wall,z_Box/2+8])rotate([90,0,180])linear_extrude(h=Wall/2)text("Air in",size=3);
     
     translate([-x_Box/2+Wall,6,z_Box/2+3])rotate([90,0,-90])linear_extrude(h=Wall/2)text("Power in",size=3);
     translate([-x_Box/2+Wall,2,z_Box/2+-0.5])rotate([90,0,-90])linear_extrude(h=Wall/2)text("24V",size=3);
@@ -420,8 +420,8 @@ module Back_neg(){
         translate([-x_Box/2+Wall+tol,-y_Box/2+b1+b2+tol,z_Box/3-Wall-tol])cube([Wall,y_Box+4*Wall-b1-b2-3*Wall+tol,Wall]);
     }
 }
-r1=25.5;
-r2=32.5;
+r1=25.5+2.5;
+r2=32.5+2.5;
 module Right(){
     difference(){
         union(){
