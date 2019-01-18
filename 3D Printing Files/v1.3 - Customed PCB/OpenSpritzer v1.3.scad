@@ -32,11 +32,11 @@ zsep = 5;           // z separation values for display function
 
 // Parts to be printed
 Bottom =  1;        // Lower Part of the box
-Front =   10;        // Front Part of the box
-Back =    10;        // Back Part of the box
+Front =   1;        // Front Part of the box
+Back =    1;        // Back Part of the box
 Right =   1;        // Right Part of the box
-Left =    10;        // Left Part of the box
-Lid =     10;        // Top Part of the box
+Left =    1;        // Left Part of the box
+Lid =     1;        // Top Part of the box
 
 
 // Display part used for visualisation
@@ -74,7 +74,7 @@ pos_z_Reg = 2 + r_RegKnob;
 r_Gauge = 40/2;
 GaugexOffset = (13.2 + 22.72)/2 +.3;
 GaugeDiameter = 9.8/2 + tol;
-AirHoseInxOffset = (36.95 + 48.05)/2 + .4-4.5-4.75;
+AirHoseInxOffset = (36.95 + 48.05)/2 + .4-4.5+4.75;
 r_AirHoseIn = (16)/2 + tol;
 x_RegStop = 5;
 
@@ -317,15 +317,15 @@ module Screw(){
             translate(screw03)cylinder(r=r_M4+Wall/2,h=z_Box-h_M4_nut,$fn=Smoothness);
             translate(screw04)cylinder(r=r_M4+Wall/2,h=z_Box-h_M4_nut,$fn=Smoothness);
 
-            translate(screw01)cylinder(r=r_M4+1.5*Wall,h=5*Wall,$fn=Smoothness);
-            translate(screw02)cylinder(r=r_M4+1.5*Wall,h=5*Wall,$fn=Smoothness);
-            translate(screw03)cylinder(r=r_M4+1.5*Wall,h=5*Wall,$fn=Smoothness);
-            translate(screw04)cylinder(r=r_M4+1.5*Wall,h=5*Wall,$fn=Smoothness);
+            translate(screw01)cylinder(r=r_M4+1.5*Wall,h=4*Wall,$fn=Smoothness);
+            translate(screw02)cylinder(r=r_M4+1.5*Wall,h=4*Wall,$fn=Smoothness);
+            translate(screw03)cylinder(r=r_M4+1.5*Wall,h=4*Wall,$fn=Smoothness);
+            translate(screw04)cylinder(r=r_M4+1.5*Wall,h=4*Wall,$fn=Smoothness);
             
-            translate(screw01+[0,0,5*Wall])cylinder(r1=r_M4+1.5*Wall,r2=r_M4+Wall/2,h=z_Box/3-7*Wall,$fn=Smoothness);
-            translate(screw02+[0,0,5*Wall])cylinder(r1=r_M4+1.5*Wall,r2=r_M4+Wall/2,h=z_Box/3-7*Wall,$fn=Smoothness);
-            translate(screw03+[0,0,5*Wall])cylinder(r1=r_M4+1.5*Wall,r2=r_M4+Wall/2,h=z_Box/3-7*Wall,$fn=Smoothness);
-            translate(screw04+[0,0,5*Wall])cylinder(r1=r_M4+1.5*Wall,r2=r_M4+Wall/2,h=z_Box/3-7*Wall,$fn=Smoothness);
+            translate(screw01+[0,0,4*Wall])cylinder(r1=r_M4+1.5*Wall,r2=r_M4+Wall/2,h=z_Box/3-7*Wall,$fn=Smoothness);
+            translate(screw02+[0,0,4*Wall])cylinder(r1=r_M4+1.5*Wall,r2=r_M4+Wall/2,h=z_Box/3-7*Wall,$fn=Smoothness);
+            translate(screw03+[0,0,4*Wall])cylinder(r1=r_M4+1.5*Wall,r2=r_M4+Wall/2,h=z_Box/3-7*Wall,$fn=Smoothness);
+            translate(screw04+[0,0,4*Wall])cylinder(r1=r_M4+1.5*Wall,r2=r_M4+Wall/2,h=z_Box/3-7*Wall,$fn=Smoothness);
         }     
         Screw_hole();
     }
@@ -380,7 +380,7 @@ module Labels(){
     translate([x_Box/2+3*Wall,-y_Box/2+30,z_Box/2-17.5])rotate([90,0,0])rotate([0,90,0])linear_extrude(h=Wall/2)text("Pulse Duration",size=5);
     translate([x_Box/2+3*Wall,-y_Box/2+4,z_Box/2-4])rotate([90,0,0])rotate([0,90,0])linear_extrude(h=Wall/2)text("Pedal / TTL",size=5);
     
-    translate([19.75,y_Box/2+4*Wall-Wall,z_Box/2+10])rotate([90,0,180])linear_extrude(h=Wall/2)text("Air in",size=5);
+    translate([12,y_Box/2+4*Wall-Wall,z_Box/2+10])rotate([90,0,180])linear_extrude(h=Wall/2)text("Air in",size=5);
     
     translate([-x_Box/2+Wall,8,z_Box/2+6])rotate([90,0,-90])linear_extrude(h=Wall/2)text("Power in",size=5);
     translate([-x_Box/2+Wall,2,z_Box/2+-0.5])rotate([90,0,-90])linear_extrude(h=Wall/2)text("24V",size=5);
@@ -446,8 +446,8 @@ module Back_neg(){
         translate([-x_Box/2+Wall+tol,-y_Box/2+b1+b2+tol,z_Box/3-Wall-tol])cube([Wall,y_Box+4*Wall-b1-b2-3*Wall+tol,Wall]);
     }
 }
-r1=35;
-r2=40;
+r1=27.5;
+r2=36;
 module Right(){
     difference(){
         union(){
