@@ -32,11 +32,11 @@ zsep = 5;           // z separation values for display function
 
 // Parts to be printed
 Bottom =  1;        // Lower Part of the box
-Front =   1;        // Front Part of the box
-Back =    1;        // Back Part of the box
+Front =   10;        // Front Part of the box
+Back =    10;        // Back Part of the box
 Right =   1;        // Right Part of the box
-Left =    1;        // Left Part of the box
-Lid =     1;        // Top Part of the box
+Left =    10;        // Left Part of the box
+Lid =     10;        // Top Part of the box
 
 
 // Display part used for visualisation
@@ -74,7 +74,7 @@ pos_z_Reg = 2 + r_RegKnob;
 r_Gauge = 40/2;
 GaugexOffset = (13.2 + 22.72)/2 +.3;
 GaugeDiameter = 9.8/2 + tol;
-AirHoseInxOffset = (36.95 + 48.05)/2 + .4-4.5;
+AirHoseInxOffset = (36.95 + 48.05)/2 + .4-4.5-4.75;
 r_AirHoseIn = (16)/2 + tol;
 x_RegStop = 5;
 
@@ -86,7 +86,7 @@ y_Box = 130 +2*TOL;
 z_Box = z_Reg + 2*Wall + 2*TOL;
 
 //Solenoid - measurements taken from the solenoid.
-x_Sol = 31+2*tol;
+x_Sol = 33.5+Wall+2*tol;
 y_Sol= 73+2*tol;
 z_Sol = 10+2*tol;
 y_Sol_in = 17;
@@ -119,7 +119,7 @@ r_Pot = 9.5/2;
 
 // BNC
 pos_x_BNC1 = 20;
-pos_x_BNC2 = 65;
+pos_x_BNC2 = 65-1.75;
 pos_z_BNC = 15.8/2;
 h_BNC = 15.8/2;
 r_BNC = 12.83/2;
@@ -137,7 +137,7 @@ pos_y_Jack = 47.75;
 h_USB = 4 + tol;
 USBWidth = 7.65 + 2*tol;
 USBWidth2 = 6.75 + 2*tol;
-pos_z_USB = 13.7;
+pos_z_USB = 13.7-2;
 
 // Power Switch
 x_Switch = 20.5/2;//14;
@@ -380,7 +380,7 @@ module Labels(){
     translate([x_Box/2+3*Wall,-y_Box/2+30,z_Box/2-17.5])rotate([90,0,0])rotate([0,90,0])linear_extrude(h=Wall/2)text("Pulse Duration",size=5);
     translate([x_Box/2+3*Wall,-y_Box/2+4,z_Box/2-4])rotate([90,0,0])rotate([0,90,0])linear_extrude(h=Wall/2)text("Pedal / TTL",size=5);
     
-    translate([15,y_Box/2+4*Wall-Wall,z_Box/2+10])rotate([90,0,180])linear_extrude(h=Wall/2)text("Air in",size=5);
+    translate([19.75,y_Box/2+4*Wall-Wall,z_Box/2+10])rotate([90,0,180])linear_extrude(h=Wall/2)text("Air in",size=5);
     
     translate([-x_Box/2+Wall,8,z_Box/2+6])rotate([90,0,-90])linear_extrude(h=Wall/2)text("Power in",size=5);
     translate([-x_Box/2+Wall,2,z_Box/2+-0.5])rotate([90,0,-90])linear_extrude(h=Wall/2)text("24V",size=5);
@@ -446,8 +446,8 @@ module Back_neg(){
         translate([-x_Box/2+Wall+tol,-y_Box/2+b1+b2+tol,z_Box/3-Wall-tol])cube([Wall,y_Box+4*Wall-b1-b2-3*Wall+tol,Wall]);
     }
 }
-r1=33;
-r2=36;
+r1=35;
+r2=40;
 module Right(){
     difference(){
         union(){
@@ -519,6 +519,7 @@ module Solenoid(){
 
 module Solenoid_Platform(){
     translate([x_Box/2,-y_Box/2+2*Wall,z_Box-Wall-z_Sol-TOL-Wall-TOL])rotate([0,0,90])cube([x_Sol,y_Sol,Wall]);
+    translate([x_Box/2,-y_Box/2+2*Wall+x_Sol-Wall,z_Box-Wall-z_Sol-TOL-TOL])rotate([0,0,90])cube([Wall,y_Sol,4*Wall]);
     difference(){
         union(){
             translate([x_Box/2,-y_Box/2+2*Wall+TOL,z_Box*2/3-Wall+tol])rotate([0,0,90])rotate(-angle_Support)cube([x_Sol,3*Wall,z_Support]);
