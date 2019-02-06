@@ -40,9 +40,9 @@ Lid =     1;        // Top Part of the box
 
 
 // Display part used for visualisation
-Regulator = 0;     // Pressure Regulator
-Solenoid = 0;      // Pressure Solenoid
-PCB = 0;           // Custumed Printed Circuit Board
+Regulator = 10;     // Pressure Regulator
+Solenoid = 10;      // Pressure Solenoid
+PCB = 10;           // Custumed Printed Circuit Board
 
 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // //
@@ -87,6 +87,7 @@ z_Box = z_Reg + 2*Wall + 2*TOL;
 
 //Solenoid - measurements taken from the solenoid.
 x_Sol = 33.5+Wall+2*tol;
+x_Sol_Plat = x_Sol+3*Wall;
 y_Sol= 73+2*tol;
 z_Sol = 10+2*tol;
 y_Sol_in = 17;
@@ -134,10 +135,10 @@ y_Jack = 9.25 + 2*tol;
 pos_y_Jack = 47.75;
 
 // Mini USB
-h_USB = 4 + tol;
-USBWidth = 7.65 + 2*tol;
-USBWidth2 = 6.75 + 2*tol;
-pos_z_USB = 13.7-2;
+h_USB = 4 + tol+2;
+USBWidth = 7.65 + 2*tol+2;
+USBWidth2 = 6.75 + 2*tol+2;
+pos_z_USB = 13.7-2.5;
 
 // Power Switch
 x_Switch = 20.5/2;//14;
@@ -151,7 +152,7 @@ screw04 = [x_Box/2+2*Wall,y_Box/2+2*Wall,Wall];
 
 // Extra
 z_Support = (z_Box-Wall-z_Sol-TOL-Wall-TOL)-(z_Box*2/3-Wall);
-angle_Support =[0,90-atan(x_Sol/z_Support),0];
+angle_Support =[0,90-atan(x_Sol_Plat/z_Support),0];
 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 /*                               ---  Display  ---                               */
@@ -199,7 +200,10 @@ if(Left==1)translate([0,-sep,2*zsep]){
         Puffer();
         Left();
     }
-    Solenoid_Platform();
+    difference(){
+        Solenoid_Platform();
+        Solenoid();
+    }
 }
 
 if(Lid==1){translate([0,0,3*zsep+tol]){
@@ -257,6 +261,7 @@ module Box(){
         
         // Mini USB
         translate([2*Wall,-y_Box/2,pos_z_PCB + pos_z_USB])USB();
+        translate([2*Wall-12.5,-y_Box/2+Wall/2,pos_z_PCB + pos_z_USB-5])cube([25,10,5.1]);
         
         // BNC
         translate([-x_PCB/2+2*Wall+pos_x_BNC1,-y_Box/2,pos_z_PCB + pos_z_BNC])BNC();
@@ -361,10 +366,10 @@ module Top_negative(){
 }
 
 module LED(){
-    translate([32,-53,z_Box-Wall-tol])cylinder(r=r_LED+tol,h=Wall+tol,$fn=Smoothness);  
+    translate([35,-49.6,z_Box-Wall-tol])cylinder(r=r_LED+tol,h=Wall+tol,$fn=Smoothness);  
 }
 module Logo(){
-    translate([x_Box/2,-20,z_Box-Wall/2])rotate([0,0,90])scale([0.75,0.75,1])scale([0.2,0.2,1])import("C:/Users/Maxime/Documents/GitHub/Openspritzer/3D Printing Files/v1.3 - Customed PCB/Badenlab_logo.stl");
+    translate([x_Box/2+3,-17,z_Box-Wall/2])rotate([0,0,90])scale([0.75,0.75,1])scale([0.2,0.2,1])import("C:/Users/Maxime/Documents/GitHub/Openspritzer/3D Printing Files/v1.3 - Customed PCB/Badenlab_logo.stl");
 }
 //C:/Users/Maxime/Desktop/Badenlab_logo.stl"
 module Title(){
@@ -373,9 +378,9 @@ module Title(){
     translate([-2.5,-55,z_Box-Wall/2])linear_extrude(h=Wall/2)rotate([0,0,90])text("An open hardware pressure ejection system",size=4.5);
 }
 module Labels(){
-    translate([19,-y_Box/2+Wall,z_Box/2+2.5])rotate([90,0,0])linear_extrude(h=Wall/2)text("Pedal",size=5);
-    translate([-25,-y_Box/2+Wall,z_Box/2+2.5])rotate([90,0,0])linear_extrude(h=Wall/2)text("TTL",size=5);
-    translate([-x_Box/2+35,-y_Box/2+Wall,z_Box/2+18])rotate([90,0,0])linear_extrude(h=Wall/2)text("Air out",size=5);
+    translate([22,-y_Box/2+Wall,z_Box/2+2.5])rotate([90,0,0])linear_extrude(h=Wall/2)text("TTL",size=5);
+    translate([-26,-y_Box/2+Wall,z_Box/2+2.5])rotate([90,0,0])linear_extrude(h=Wall/2)text("Pedal",size=5);
+    translate([-x_Box/2+29,-y_Box/2+Wall,z_Box/2+18])rotate([90,0,0])linear_extrude(h=Wall/2)text("Air out",size=5);
     
     translate([x_Box/2+3*Wall,-y_Box/2+30,z_Box/2-17.5])rotate([90,0,0])rotate([0,90,0])linear_extrude(h=Wall/2)text("Pulse Duration",size=5);
     translate([x_Box/2+3*Wall,-y_Box/2+4,z_Box/2-4])rotate([90,0,0])rotate([0,90,0])linear_extrude(h=Wall/2)text("Pedal / TTL",size=5);
@@ -501,7 +506,7 @@ module Left_neg(){
 
 // // // // // // // // // // // // Component Modules // // // // // // // // // // // //
 
-module Regulator(){color([1,0,1])translate([x_Box/2-x_Reg+2*Wall-TOL,y_Box/2-y_Reg+2*Wall-TOL-r_M4-1.5*Wall,Wall+TOL]){
+module Regulator(){color([1,0,1])translate([x_Box/2-x_Reg+2*Wall-TOL,y_Box/2-y_Reg+2*Wall-TOL-r_M4-1.5*Wall+2.75,Wall+TOL]){
     cube([x_Reg,y_Reg,z_Reg]);
     translate([x_Reg,y_Reg/2,z_Reg/2])rotate([0,90,0])cylinder(r=r_RegKnob, h=r_RegKnob, $fn=Smoothness);
     translate([x_Reg-GaugexOffset,y_Reg/2,z_Reg])cylinder(r=GaugeDiameter , h=2*Wall, $fn=Smoothness);
@@ -511,21 +516,21 @@ module Regulator(){color([1,0,1])translate([x_Box/2-x_Reg+2*Wall-TOL,y_Box/2-y_R
 module Solenoid(){
     color([1,0,1])translate([x_Box/2-8,-y_Box/2+2*Wall+TOL+r_M4+Wall/2,z_Box-Wall-z_Sol-TOL])rotate([0,0,90]){
         cube([x_Sol,y_Sol,z_Sol]);
-        translate([x_Sol,y_Sol-y_Sol_in,z_Sol/2])rotate([0,90,0])cylinder(r=r_Sol, h=4*Wall+TOL, $fn=Smoothness);
-        translate([0,y_Sol-y_Sol_out1,z_Sol/2])rotate([0,-90,0])cylinder(r=r_Sol, h=4*Wall+TOL, $fn=Smoothness);
-        translate([0,y_Sol-y_Sol_out2,z_Sol/2])rotate([0,-90,0])cylinder(r=r_Sol, h=4*Wall+TOL, $fn=Smoothness);
+        translate([0,y_Sol-y_Sol_in,z_Sol/2])rotate([0,-90,0])cylinder(r=r_Sol, h=4*Wall+TOL, $fn=Smoothness);
+        translate([x_Sol,y_Sol-y_Sol_out1,z_Sol/2])rotate([0,90,0])cylinder(r=r_Sol, h=4*Wall+TOL, $fn=Smoothness);
+        translate([x_Sol,y_Sol-y_Sol_out2,z_Sol/2])rotate([0,90,0])cylinder(r=r_Sol, h=4*Wall+TOL, $fn=Smoothness);
     }
 }   
 
 module Solenoid_Platform(){
-    translate([x_Box/2,-y_Box/2+2*Wall,z_Box-Wall-z_Sol-TOL-Wall-TOL])rotate([0,0,90])cube([x_Sol,y_Sol,Wall]);
-    translate([x_Box/2,-y_Box/2+2*Wall+x_Sol-Wall,z_Box-Wall-z_Sol-TOL-TOL])rotate([0,0,90])cube([Wall,y_Sol,4*Wall]);
+    translate([x_Box/2,-y_Box/2+2*Wall,z_Box-Wall-z_Sol-TOL-Wall-TOL])rotate([0,0,90])cube([x_Sol_Plat,y_Sol,Wall]);
+    translate([x_Box/2,-y_Box/2+2*Wall+x_Sol_Plat-Wall,z_Box-Wall-z_Sol-TOL-TOL])rotate([0,0,90])cube([Wall,y_Sol-8,z_Sol+2*TOL]);
     difference(){
         union(){
-            translate([x_Box/2,-y_Box/2+2*Wall+TOL,z_Box*2/3-Wall+tol])rotate([0,0,90])rotate(-angle_Support)cube([x_Sol,3*Wall,z_Support]);
-            translate([x_Box/2-y_Sol+3*Wall,-y_Box/2+2*Wall+TOL,z_Box*2/3-Wall+tol])rotate([0,0,90])rotate(-angle_Support)cube([x_Sol,3*Wall,z_Support]);
+            translate([x_Box/2,-y_Box/2+2*Wall+TOL,z_Box*2/3-Wall+tol])rotate([0,0,90])rotate(-angle_Support)cube([x_Sol_Plat,3*Wall,z_Support]);
+            translate([x_Box/2-y_Sol+3*Wall,-y_Box/2+2*Wall+TOL,z_Box*2/3-Wall+tol])rotate([0,0,90])rotate(-angle_Support)cube([x_Sol_Plat,3*Wall,z_Support]);
         }
-        translate([x_Box/2,-y_Box/2+2*Wall+TOL,z_Box-Wall-z_Sol-TOL-TOL])rotate([0,0,90])cube([x_Sol,y_Sol,2*Wall]);
+        translate([x_Box/2,-y_Box/2+2*Wall+TOL,z_Box-Wall-z_Sol-TOL-TOL])rotate([0,0,90])cube([x_Sol_Plat,y_Sol,2*Wall]);
     }
 }
 
