@@ -37,11 +37,11 @@ particularly attractive for those wishing to pursue cutting-edge techniques in l
 This repository contains detailed [assembly instructions](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/v1.3%20-%20Supplementary%20Material.pdf) and an operation manual for Openspritzer. The [bill of material](https://github.com/BadenLab/Openspritzer/blob/master/BOM.csv) details all pneumatic, mechanical and electronic components required along with possible supplier URL links.
 
 
-To simplify the wiring assembly, we have designed a customed [circuit board](https://github.com/BadenLab/Openspritzer/tree/master/PCB). PCB prototype companies will only need the [Gerber](https://github.com/BadenLab/Openspritzer/tree/master/Printed%20Circuit%20Board/OpenSpritzer%20v1.3/gerber) files to be sent to them for production.
+To simplify the wiring assembly, we have designed a customed [circuit board](https://github.com/BadenLab/Openspritzer/tree/master/PCB). PCB prototype companies will only need the gerber.zip folder to be sent to them for production.
 
 <img align="left" width="275" height="200" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/3d%20print.png">
 
-We used [OpenSCAD](http://openscad.org) to design [3D files](https://github.com/BadenLab/Openspritzer/tree/master/3D%20printing%20files) that could be printed to efficiently hold all openspritzer components. You may have to modify the measurements in the script to comply with the components that you have purchased.
+We used [OpenSCAD](http://openscad.org) to design [3D files](https://github.com/BadenLab/Openspritzer/tree/master/3D%20Designs) that could be printed to efficiently hold all openspritzer components. 
 
 The device is controled by an arduino nano. The [.ino code](https://github.com/BadenLab/Openspritzer/tree/master/Arduino) can be modified and uploaded as many times as you like. The way the Openspritzer code has been constructed allows simple modification of key parameters such as the base unit of time. These are all included at the beginning of the code for ease of reference.
 
