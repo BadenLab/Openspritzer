@@ -3,7 +3,7 @@
 <h3 align="center">An open hardware pressure ejection system for reliably delivering picolitre volumes.</h3>
 <p align="center"><h6 align="right">by C.J. Forman, H. Tomes, B. Mbobo, R.J. Burman, M. Jacobs, T Baden &
 J.V. Raimondo</h6></p>
-<p align="center"><h6 align="right">adapted by MJY Zimmermann</h6></p>
+<p align="center"><h6 align="right">adapted by M.J.Y. Zimmermann</h6></p>
 <img align="center" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Cover%20Picture2.PNG" width="1000"/>
 </p>
 
@@ -32,9 +32,9 @@ in the life and physical sciences.
 Compared to similar commercial systems that can cost up to several thousand pounds, the cost of the fully equiped Openspritzer (~£350) makes it
 particularly attractive for those wishing to pursue cutting-edge techniques in low ressource environments.
 
-This repository contains detailed [assembly instructions](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/supplementary_information_final.pdf) and an operation manual for Openspritzer. The [bill of material](https://github.com/BadenLab/Openspritzer/blob/master/BOM.csv) details all pneumatic, mechanical and electronic components required along with possible supplier URL links.
+This repository contains detailed [assembly instructions](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/v1.3%20-%20Supplementary%20Material.pdf) and an operation manual for Openspritzer. The [bill of material](https://github.com/BadenLab/Openspritzer/blob/master/BOM.csv) details all pneumatic, mechanical and electronic components required along with possible supplier URL links.
 
-<img align="right" width="175" height="200" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB%20Board.png">
+<img align="right" width="175" height="400" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB.png">
 
 To simplify the wiring assembly, we have designed a customed [circuit board](https://github.com/BadenLab/Openspritzer/tree/master/PCB). PCB prototype companies will only need the [Gerber](https://github.com/BadenLab/Openspritzer/tree/master/Printed%20Circuit%20Board/OpenSpritzer%20v1.3/gerber) files to be sent to them for production.
 
