@@ -35,7 +35,7 @@ Compared to similar commercial systems that can cost up to several thousand poun
 particularly attractive for those wishing to pursue cutting-edge techniques in low ressource environments.
 
 
-This repository contains detailed [assembly instructions](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/V1.3%20-%20Supplementary%20Material.odt) and an operation manual for Openspritzer. The [bill of material](https://github.com/BadenLab/Openspritzer/blob/master/BOM.csv) details all pneumatic, mechanical and electronic components required along with possible supplier URL links.
+This repository contains detailed [assembly instructions](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/V1.3%20-%20Supplementary%20Material.odt) and an operation manual for Openspritzer. The [bill of material](https://github.com/BadenLab/Openspritzer/blob/master/Bill%20of%20Materials/BOM.csv) details all pneumatic, mechanical and electronic components required along with possible supplier URL links.
 
 
 To simplify the wiring assembly, we have designed a customed [circuit board](https://github.com/BadenLab/Openspritzer/tree/master/PCB). PCB prototype companies will only need the gerber.zip folder to be sent to them for production.
