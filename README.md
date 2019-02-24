@@ -43,7 +43,7 @@ To simplify the wiring assembly, we have designed a customed [circuit board](htt
 
 We used [OpenSCAD](http://openscad.org) to design [3D files](https://github.com/BadenLab/Openspritzer/tree/master/3D%20Designs) that could be printed to efficiently hold all openspritzer components.
 
-The device is controled by an arduino nano. The [.ino code](https://github.com/BadenLab/Openspritzer/tree/master/Arduino%20Code/OpenSpritzer) can be modified and uploaded as many times as you like. The way the Openspritzer code has been constructed allows simple modification of key parameters such as the base unit of time. These are all included at the beginning of the code for ease of reference.
+The device is controled by an arduino nano. The [.ino code](https://github.com/BadenLab/Openspritzer/tree/master/Arduino%20Code/OpenSpritzer) can be modified and uploaded as many times as you like. The way the Openspritzer code has been constructed allows simple modification of key parameters. These are all included at the beginning of the code for ease of reference.
 
 ***
 
