@@ -20,7 +20,7 @@ in the life and physical sciences.
 
 ***
 
-- [A £350 DIY opensource microinjector](#openspritzer,-a-DIY-opensource-microinjector.)
+- [A £350 DIY opensource microinjector](#Openspritzer,-a-DIY-opensource-microinjector.)
 - [An efficient device that provides similar level of control as commercial systems](#Openspritzer-rivals-the-performance-of-commercial-systems.)
 - [OpenSpritzer can deliver neurotransmitters with millisecond precision to control neural activity](#Openspritzer-in-neuroscience-experiments.)
 - [OpenSpritzer is suitable for delivering infectious agents including viral delivery of opsins for optogenetics](#Openspritzer-for-microinjection-of-infectious-agents)
@@ -34,7 +34,7 @@ particularly attractive for those wishing to pursue cutting-edge techniques in l
 
 <img align="right" width="175" height="400" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB.png">
 
-This repository contains detailed [assembly instructions](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/v1.3%20-%20Supplementary%20Material.pdf) and an operation manual for Openspritzer. The [bill of material](https://github.com/BadenLab/Openspritzer/blob/master/BOM.csv) details all pneumatic, mechanical and electronic components required along with possible supplier URL links.
+This repository contains detailed [assembly instructions](https://github.com/BadenLab/Openspritzer/blob/master/Manuscript%20and%20Instruction/v1.3%20-%20Supplementary%20Material.odt) and an operation manual for Openspritzer. The [bill of material](https://github.com/BadenLab/Openspritzer/blob/master/BOM.csv) details all pneumatic, mechanical and electronic components required along with possible supplier URL links.
 
 
 To simplify the wiring assembly, we have designed a customed [circuit board](https://github.com/BadenLab/Openspritzer/tree/master/PCB). PCB prototype companies will only need the gerber.zip folder to be sent to them for production.

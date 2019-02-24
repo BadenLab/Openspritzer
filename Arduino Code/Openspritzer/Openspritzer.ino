@@ -15,13 +15,16 @@ Baden Lab, CRPC, School of Life Sciences, University of Sussex, United Kingdom
 //                         KEY PARAMETERS TO SET BY USERS
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-  const int PULSE_LOW           = 10;     // Minimum Pulse Duration in ms
-  const int PULSE_HIGH          = 1000;   // Maximum Pulse Duration in ms
+  const int POT_LOW           = 0;      // Lowest value read from the potentiometer.
+  const int POT_HIGH          = 1023;   // Highest value read from the potentiometer 
+  const int PotNoise          = 10;     // Error value added to the potentiometer reading (0 - 1023)
   
-  const int PULSE_Delay         = 500;    // Minimum time between two sucessive button push in ms
+  const int PULSE_LOW         = 10;     // Minimum Pulse Duration in ms
+  const int PULSE_HIGH        = 1000;   // Maximum Pulse Duration in ms
+  
+  const int PULSE_Delay       = 500;    // Minimum time between two sucessive button push in ms
 
-
-
+  
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //                               GLOBAL VARIABLES
 //////////////////////////////////////////////////////////////////////////////////////////////// 
@@ -34,11 +37,10 @@ Baden Lab, CRPC, School of Life Sciences, University of Sussex, United Kingdom
   
 
   // Declare global variables
-  const int POT_LOW           = 0;      // Lowest value available from the potentiometer.
-  const int POT_HIGH          = 1023;   // Highest value available from the potentiometer  
+ 
   int PotValue                = 0;      // Potentiometer value reading
   int CurrentPotValue         = 0;      // Current potentiometer value read
-  int PotNoise                = 10;     // Error value added to the potentiometer reading (0 - 1023)
+
   int Pulse_Duration          = 0;      // Amount of time the pulse is on
   word BaudRate               = 9600;   // Baud Rate
 
@@ -125,7 +127,7 @@ void loop() {
 
    // Monitor Potentiometer values
    if(Serial.available()) {
-     Serial.print("Potentiometer value");
+     Serial.print("PotValue");
      Serial.println(CurrentPotValue);
    }
 }
