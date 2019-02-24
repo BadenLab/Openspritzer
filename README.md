@@ -2,7 +2,8 @@
 <h1 align="center">Openspritzer</h1></p>
 <h3 align="center">An open hardware pressure ejection system for reliably delivering picolitre volumes.</h3>
 <p align="center"><h6 align="right">by C.J. Forman, H. Tomes, B. Mbobo, R.J. Burman, M. Jacobs, T Baden &
-J.V. Raimondo</h6>
+J.V. Raimondo</h6></p>
+<p align="center"><h6 align="right">adapted by MJY Zimmermann</h6></p>
 <img align="center" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Cover%20Picture2.PNG" width="1000"/>
 </p>
 
@@ -35,7 +36,7 @@ This repository contains detailed [assembly instructions](https://github.com/Bad
 
 <img align="right" width="175" height="200" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB%20Board.png">
 
-To simplify the wiring assembly, we have designed a customed [circuit board](https://github.com/BadenLab/Openspritzer/tree/master/PCB). PCB prototype enterprise will only need the [Gerber](https://github.com/BadenLab/Openspritzer/tree/master/PCB/OpenSpritzer%20v0.02/gerber) files to be sent to them for production.
+To simplify the wiring assembly, we have designed a customed [circuit board](https://github.com/BadenLab/Openspritzer/tree/master/PCB). PCB prototype companies will only need the [Gerber](https://github.com/BadenLab/Openspritzer/tree/master/Printed%20Circuit%20Board/OpenSpritzer%20v1.3/gerber) files to be sent to them for production.
 
 <img align="left" width="275" height="200" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/3d%20print.png">
 
