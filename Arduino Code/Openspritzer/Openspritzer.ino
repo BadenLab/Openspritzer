@@ -40,6 +40,7 @@ Baden Lab, CRPC, School of Life Sciences, University of Sussex, United Kingdom
   int CurrentPotValue         = 0;      // Current potentiometer value read
   int PotNoise                = 10;     // Error value added to the potentiometer reading (0 - 1023)
   int Pulse_Duration          = 0;      // Amount of time the pulse is on
+  word BaudRate               = 9600;   // Baud Rate
 
 
 
@@ -78,6 +79,9 @@ void Pulse(){
 //////////////////////////////////////////////////////////////////////////////////////////////// 
 
 void setup() {
+  // Initialise the serial communication with PC
+  Serial.begin(BaudRate);
+  
   // Initialize the pins
   pinMode(PotPin, INPUT);
   pinMode(FootPin, INPUT);
@@ -117,4 +121,11 @@ void loop() {
           SetPulseDuration();
           delay(PULSE_Delay);
       }
+
+
+   // Monitor Potentiometer values
+   if(Serial.available()) {
+     Serial.print("Potentiometer value");
+     Serial.println(CurrentPotValue);
+   }
 }
