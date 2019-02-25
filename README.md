@@ -83,4 +83,4 @@ Furthermore, with the emergence of a plethora of popular new techniques involvin
 We anticipate that due to its high performance and low cost Openspritzer will be of interest to a broad range of researchers working in the life and physical sciences.
 
 <p align="center"><h6 align="right">Source: CJ. Forman et al, 2017 --  https://www.nature.com/articles/s41598-017-02301-2   </h6>
-<p align="center"><h6 align="right">This project is licensed under the [GNU General Public License v3.0](https://github.com/BadenLab/Openspritzer/blob/master/LICENSE)</h6>
+<p align="center"><h6 align="right">This project is licensed under the [GNU General Public License v3.0](https://github.com/BadenLab/Openspritzer/blob/master/LICENSE) </h6>
