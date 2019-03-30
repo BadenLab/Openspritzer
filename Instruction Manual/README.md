@@ -19,7 +19,7 @@ The device is here shown without its covering lid. The pressure regulator is mou
 ***
 
 - [Assembling OpenSpritzer](#Assembly)
-- [Programming the Stimulator](#Programming-the-ESP32)
+- [Programming OpenSpritzer](#Programming-the-Spritzer)
 - [Operating the Stimulator](#Operating-the-Stimulator)
 - [Calibrating the Stimulator](#Calibrating-the-Stimulator)
 
@@ -70,8 +70,6 @@ All part should fit tightly together and are maintained together by 4 M3*50mm so
 
 <p align="center"><h4 align="left">4 – Connecting the Spritzer</h4></p>
 
-<img align="right" width="580" height="380" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Connection.png">
-
 Connect an air compressor to the “Air In” port via the L-shaped adaptor.
 
 The output airhose must be connected to the “Air Out” port.
@@ -81,34 +79,40 @@ The stimulator must be powered with a 24v power supply. The Arduino Nano is powe
 
 For convenience in darkened circumstances the LED will also illuminate whenever the 5v line is high.
 
-The foot pedal and/or the TTL cable(s), once soldered to a BNC male connector should be connected on the left side of the box to their appropriate BNC female connector. To operate with a footswitch the DPDT must be placed in Arduino mode and a 5 V power supply provided to the Arduino via the USB port. It is not necessary to use the Arduino to operate the solenoid if you have a convenient method for producing 5v TTL pulses, such as PulseQ electrophysiology package (Funetics) running on Igor Pro (Wavemetrics) in conjunction with the ITC 1600. To use TTL pulses ensure the DPDT switch is in the “TTL” position. Whenever the 5v line is high the solenoid will open and release compressed air from the output valve.
+<img align="right" width="580" height="380" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Connection.png">
 
-Using the Arduino to drive the puffer allows operation with the external footswitch. To operate with a footswitch the DPDT must be placed in “Foot Pedal”. Attaching a computer at operation time allows for dynamic reprogramming of the Arduino during experimentation, which could be very useful. E.g. resetting the base time unit.
+The foot pedal and/or the TTL cable(s), once soldered to a BNC male connector should be connected on the left side of the box to their appropriate BNC female connector. To operate with a footswitch the DPDT must be placed in the "Pedal" position. It is not necessary to use the Arduino to operate the solenoid if you have a convenient method for producing 5v TTL pulses, such as PulseQ electrophysiology package (Funetics) running on Igor Pro (Wavemetrics) in conjunction with the ITC 1600. To use TTL pulses ensure the DPDT switch is in the “TTL” position. Whenever the 5v line is high the solenoid will open and release compressed air from the output valve.
+
+Attaching a computer at operation time allows for dynamic reprogramming of the Arduino during experimentation, which could be very useful. E.g. resetting the base time unit.
 To operate the unit, press the foot-button and after 400 milliseconds a puff of a predefined duration will occur. The LED will illuminate during the puff to give visual confirmation that the puff has occurred. The duration of the puff can be changed by adjusting the potentiometer.
 
-When the potentiometer is changed Openspritzer goes into a monitoring mode during which time the LED is continuously lit. When the potentiometer stops changing, Openspritzer lits the LED to indicate the new time duration.
+When the potentiometer is changed Openspritzer goes into a monitoring mode during which time the LED is lit and indicate the new time duration.
 
 ***
 
-## Programming the ESP32
+## Programming the Spritzer
 
 
-1-	Download and install [Arduino environment](www.arduino.org) on the computer.
+1-	Download and install [Arduino environment](www.arduino.org) on a computer.
 
-2-	To use the ESP32, a couple of steps are necessary
-Install the latest SiLabs [CP2104 driver](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers).
-Follow the installation instructions from the [Espressif repository](https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md).
+2-	Close Arduino and open the Openspritzer arduino file from the [Arduino Code folder](https://github.com/BadenLab/Openspritzer/blob/master/Arduino%20Code/Openspritzer/Openspritzer.ino).
 
-3-	Install the TLC5947 library:	Start Arduino and from the “Sketch” tab, select “Include Library” and open “ Manage Libraries”.	From the search bar enter “TLC5947”. Select and Install the library
+3-	From the “Tools” tab: Select from “Boards” the “Arduino nano”.	From “Processor”, select ATM328P (If you're using an arduino clone or an old official board, select ATM328P (Old Bootloader)). From “Port”, select the computer port to which the Arduino is connected (if doubt, unplug, replug and observe the choices differences). If the Arduino is not recognised, check the driver installation (if you're using a clone, check the processor datasheet of your model), then check the mini USB cable.
 
-4-	Close Arduino and open the Multi-Chromatic-Stimulator arduino file from the [Arduino Code folder](https://github.com/MaxZimmer/Multi-Chromatic-Stimulator/tree/master/Arduino%20code/2-Photon_Mutli_Chromatic_Stimulator).
+4-	Compile and Upload the code by clicking on the arrow button on the top left.
 
+5-	The Spritzer is ready to be used.
 
-5-	From the “Tools” tab: Select from “Boards” the “Adafruit ESP32 Feather”.	From “Upload Speed”, select 921600.	From “Flash Frequency”, select 80Hz. From “Port”, select the computer port to which the ESP is connected (if doubt, unplug, replug and observe the choices differences). If the ESP is not recognised, check the driver installation (2), then check the micro USB cable.
+The code can be modified and uploaded as many times as you like. The way the Openspritzer code has been constructed allows simple modification of key parameters such as the base unit of time and are listed in supporting table 2.
 
-6-	Compile and Upload the code by clicking on the arrow button on the top left.
+<h4> IMPORTANT</h4>: The first time that the Arduino is used the POT_LOW and POT_HIGH parameters should be measured. A Serial.println statement is included in the code to allow monitoring of this value over the serial port. To measure these values, open the serial port monitoring window in the Arduino programming environment (magnifying lens, top right corner) and then sweep the potentiometer from low to high. The two parameters POT_HIGH and POT_LOW should be initialised to the highest values and lowest values observed in the monitoring window output (usually those should be 0 and 1023). This is used in the calculations of the pulse duration and will vary from Openspritzer to Openspritzer depending on the precise value of the potentiometer resistance.
 
-7-	The stimulator is ready to be used.
+The monitoring algorithm relies on the PotNoise parameter to decide whether or not the potentiometer has settled. To set PotNoise, monitor the serial port output during the analog monitoring procedure (described above) and find the PotValue measured by the analogRead command. PotNoise should be larger than any fluctuations in the PotValue when it is not being altered. During testing, depending on which power supply was used, it was found that a reasonable value for PotNoise was 5.
+
+Next the user assigns a time to the minimum and maximum potentiometer value by modifying PULSE_LOW and PULSE_HIGH. Those value are in milliseconds. PULSE_LOW will correspond to the minimum air puff duration when the potentiometer is turn all the way down, and reciprocally for PULSE_HIGH. By default those values are 10 and 1000 ms.
+Finally, the PULSE_Delay is to be defined. This value allows some time for the user to release the button before applying the next pulse. This value can be adjusted to give rapid or spread pulses, however we found that for the average user, a value of 500ms is sufficient.
+
+The user is obviously free to write any code they wish to monitor the foot button, read the potentiometer, blink the LED or operate the solenoid.
 
 ***
 
