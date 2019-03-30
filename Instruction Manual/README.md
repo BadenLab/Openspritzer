@@ -103,7 +103,7 @@ When the potentiometer is changed Openspritzer goes into a monitoring mode durin
 5-	The Spritzer is ready to be used.
 
 
-<img width="850" height="700" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Top%20View2.jpg">
+<img width="700" height="600" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Top%20View2.jpg">
 
 ***
 
