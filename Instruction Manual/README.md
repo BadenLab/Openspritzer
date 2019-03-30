@@ -51,28 +51,19 @@ The board is self-explanatory and should not take more than an hour to solder
 <img align="center" width="570" height="370" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB3.png">
 
 
-****
-
-<p align="center"><h4 align="left">3 – Mounting the potentiometer</h4></p>
-<img align="right" width="300" height="192" src="https://github.com/MaxZimmer/Multi-Chromatic-Stimulator/blob/master/Images/Potentiometer%20PCB.png">
-
-In order to finely adjust each LED power, we added multiple-turn trimmer potentiometers to our design. A simple solution is to manufacture the appropriate PCB board (We provide multiple options on the [GitHub repository](https://github.com/MaxZimmer/Multi-Chromatic-Stimulator/tree/master/PCB/Potentiometer%20Mounts)).
-
-Otherwise, one can make its own little PCB by using a solderable board.
-Each potentiometer connects its ClockWise (pin 3) to the LED (+) stimulator JST pin; and its Base (pin 2) to the LED (+) leg. The LED (-) stimulator JST pin connects the LED (-) leg directly.
-
 ***
 
-<p align="center"><h4 align="left">4 – Printing the Stimulator box</h4></p>
-<img align="left" width="300" height="250" src="https://github.com/MaxZimmer/Multi-Chromatic-Stimulator/blob/master/Images/Box.png">
+<p align="center"><h4 align="left">3 – Printing the Spritzer box</h4></p>
+<img align="left" width="300" height="250" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/3d%20print.png">
 
-[STL files](https://github.com/MaxZimmer/Multi-Chromatic-Stimulator/tree/master/3D%20Designs/Stimulator/STL%20Files) can be found on the GitHub repository and print directly if the user wishes to go for the default design (4 stimulation LEDs + 4 proxy LEDs) and [BoM](https://github.com/MaxZimmer/Multi-Chromatic-Stimulator/blob/master/Bills%20of%20Materials/BOM%20-%20Stimulator.ods).
+[STL files](https://github.com/BadenLab/Openspritzer/tree/master/3D%20Designs/v1.3%20-%20Customed%20PCB/STL%20Files) can be found on the GitHub repository and print directly if the user wishes to go for the default design (4 stimulation LEDs + 4 proxy LEDs) and [BoM](https://github.com/BadenLab/Openspritzer/blob/master/Bill%20of%20Materials/BOM.csv).
 
-However, [SCAD files](https://github.com/MaxZimmer/Multi-Chromatic-Stimulator/blob/master/3D%20Designs/Optical%20Components/Optical%20Components.scad) are also available and easily adjustable for personalised design.
+However, [SCAD files](https://github.com/BadenLab/Openspritzer/blob/master/3D%20Designs/v1.3%20-%20Customed%20PCB/OpenSpritzer%20v1.3.scad) are also available and easily adjustable for personalised design.
 
 We used [OpenSCAD](www.openscad.com) to design the stimulator box. The tolerance of the printer can be adjusted in the “USER Parameters” section of the script (tol =0.1; by default, this value is used for Prusa MK3 and Ultimaker 2). Each component can be displayed/design individually in the “Switches” section. Variables such as LED number (4 by default) and the potentiometer board dimensions can be adjusted in the “Component Parameters” section.
 
 The PCB is screwed to the “Bottom” part of the box by using M3 screws and nuts. The potentiometer board adjusts itself with the “Back” part of the box, and the trimmers should adapt to their respective holes exactly.
+
 All part should fit tightly together and are maintained together by 4 M3*50mm socket screws.
 
 
