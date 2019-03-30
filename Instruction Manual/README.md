@@ -54,7 +54,7 @@ The board is self-explanatory and should not take more than an hour to solder
 ***
 
 <p align="center"><h4 align="left">3 – Printing the Spritzer box</h4></p>
-<img align="left" width="300" height="250" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/3d%20print.png">
+<img align="left" width="550" height="350" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/3d%20print.png">
 
 [STL files](https://github.com/BadenLab/Openspritzer/tree/master/3D%20Designs/v1.3%20-%20Customed%20PCB/STL%20Files) can be found on the GitHub repository and print directly if the user wishes to go for the default design (4 stimulation LEDs + 4 proxy LEDs) and [BoM](https://github.com/BadenLab/Openspritzer/blob/master/Bill%20of%20Materials/BOM.csv).
 
