@@ -6,13 +6,15 @@
 
 ## Overview
 
-<img align="right" width="550" height="410" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/components.png">
+<img align="right" width="550" height="410" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Top%20View.png">
 
 This document contains detailed assembly instructions, a software guideline and includes a parts list.
 
  The Arduino code and 3D printing files (SCAD and STL) can be downloaded [here](https://github.com/BadenLab/Openspritzer/tree/master/3D%20Designs/v1.3%20-%20Customed%20PCB), and further modified to fit customise purposes. The purpose of the device is to regulate the pressure and duration of a puff of compressed air. Typically, the output port is connected to a glass puffer pipette which has been drawn into a sharp point with a narrow (2-3μm) diameter pore.
 
 The device consists of a circuit board, a solenoid valve, a pressure regulator with a gauge and various interface, off-the-shelf, components.
+
+The device is here shown without its covering lid. The pressure regulator is mounted on the right and attached to the front panel via a retaining threaded ring that comes with the regulator. The printed circuit board (PCB) is mounted onto attachment points on the bottom of the box. There is a platform supports on which the solenoid can rest above the circuit board and a LED can be attached to a mount-point on the lid.
 
 ***
 
@@ -40,7 +42,7 @@ Schematics and PCB footprint can be downloaded and modified from the same reposi
 ****
 
 <p align="center"><h4 align="left">2 – Soldering the custom-designed PCB</h4></p>
-<img align="left" width="375" height="225" src="https://github.com/MaxZimmer/Multi-Chromatic-Stimulator/blob/master/Images/PCB01.png">
+<img align="left" width="340" height="500" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB%20Board.png">
 
 The board is self-explanatory. On the left, two options are available, one for the Arduino (close rows) the other for the ESP (spread rows). There is no need to solder more JST pins that the number of LED required for the desired stimulator. The two resistors at the bottom are a voltage divider for the ESP32 only (There’s no need to solder any resistor here if the Arduino option is chosen).
 
