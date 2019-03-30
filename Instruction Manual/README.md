@@ -21,7 +21,6 @@ The device is here shown without its covering lid. The pressure regulator is mou
 - [Assembling OpenSpritzer](#Assembly)
 - [Programming OpenSpritzer](#Programming-the-Spritzer)
 - [Operating the Stimulator](#Operating-the-Stimulator)
-- [Calibrating the Stimulator](#Calibrating-the-Stimulator)
 
 ***
 
@@ -102,6 +101,11 @@ When the potentiometer is changed Openspritzer goes into a monitoring mode durin
 4-	Compile and Upload the code by clicking on the arrow button on the top left.
 
 5-	The Spritzer is ready to be used.
+
+
+<width="460" height="340" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Top%20View2.png">
+
+***
 
 The code can be modified and uploaded as many times as you like. The way the Openspritzer code has been constructed allows simple modification of key parameters such as the base unit of time and are listed in supporting table 2.
 
