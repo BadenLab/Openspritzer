@@ -42,18 +42,13 @@ Schematics and PCB footprint can be downloaded and modified from the same reposi
 ****
 
 <p align="center"><h4 align="left">2 – Soldering the custom-designed PCB</h4></p>
-<img align="left" width="340" height="500" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB%20Board.png">
+<img align="left" width="550" height="410" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/components.png">
 
-The board is self-explanatory. On the left, two options are available, one for the Arduino (close rows) the other for the ESP (spread rows). There is no need to solder more JST pins that the number of LED required for the desired stimulator. The two resistors at the bottom are a voltage divider for the ESP32 only (There’s no need to solder any resistor here if the Arduino option is chosen).
+The board is self-explanatory and should not take more than an hour to solder
 
-ESP32 unlike Arduino Nano, works on a 3.3V logic; no higher tension should be sent to this board. Since most TTL deliver 5V pulses, we selected a 220/470Ω divider to bring a 5V blanking signal into a 3.3V input. Depending on the blanking signal generator used, this divider can be modified to fit one’s personal design or bypassed by only bridging the 220Ω resistor.
 
-(Supplementary Figure S3 TESSA PICTURE)
 
-<img align="right" width="500" height="200" src="https://github.com/MaxZimmer/Multi-Chromatic-Stimulator/blob/master/Images/reference%20resistor%20vs%20output%20current.png">
-
-The Adafruit TLC5947 LED driver is a constant current driver configured by default to set the current level at 15mA per channel, which is virtually safe for any LED. However, one can operate at different current by replacing the on-board reference resistor with a through hole resistor. The driver is capable to deliver up to 30mA, the graph below shows the relationship between resistance and output current.
-
+<img width="500" height="200" src="https://github.com/MaxZimmer/Multi-Chromatic-Stimulator/blob/master/Images/PCB3.png">
 
 
 ****
