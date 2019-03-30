@@ -6,7 +6,7 @@
 
 ## Overview
 
-<img align="right" width="550" height="410" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Top%20View.png">
+<img align="right" width="550" height="410" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/Top%20View.jpg">
 
 This document contains detailed assembly instructions, a software guideline and includes a parts list.
 
