@@ -48,7 +48,7 @@ The board is self-explanatory and should not take more than an hour to solder
 
 
 
-<img width="500" height="200" src="https://github.com/MaxZimmer/Multi-Chromatic-Stimulator/blob/master/Images/PCB3.png">
+<img width="500" height="200" src="https://github.com/BadenLab/Openspritzer/blob/master/Images/PCB3.png">
 
 
 ****
