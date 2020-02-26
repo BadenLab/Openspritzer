@@ -67,7 +67,7 @@ contact:
 #    affiliation: [value]                   # text
 #    email: [value]                         # email address
 
-#image: [value]                             # recommended | absolute or relative path
+image: https://raw.githubusercontent.com/BadenLab/Openspritzer/master/Images/Cover%20Picture2.PNG                             # recommended | absolute or relative path
 
 version: 1.3                           # text
 
