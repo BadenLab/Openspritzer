@@ -18,7 +18,8 @@ are prepare to shop around.
 <p align="justify">We anticipate that due to its high performance and low cost Openspritzer will be of interest to a broad range of researchers working
 in the life and physical sciences.</p>
 
-This project is licensed under the [GNU General Public License v3.0](https://github.com/BadenLab/Openspritzer/blob/master/LICENSE)
+This project is licensed under the [GNU General Public License v3.0](https://github.com/BadenLab/Openspritzer/blob/master/LICENSE)<br>
+The hardware is licensed under the [CERN OHL v1.2](https://github.com/BadenLab/LED-Zappelin/blob/master/PCB/LICENSE)
 
 ***
 
