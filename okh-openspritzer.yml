@@ -47,6 +47,9 @@ intended-use: |                            # recommended | Paragraph
 keywords:                                  # At least one keyword is recommended | text array
   - neuroscience
   - open science
+  - injection
+  - pressure system
+  - sprtizer
 
 
 project-link: https://github.com/badenlab/Openspritzer       # At least project-link or documentation-home is required, otherwise recommended | absolute path URL
@@ -109,9 +112,9 @@ license:                                   # At least one license is required | 
   software: CC-BY-SA v4.0                        # recommended where software is used | The license under which the software is released
 
 licensor:
-  name: Maxime Zimmerman                        # text
+  name: Maxime Zimmermann                        # text
   affiliation: University of Sussex             # text
-  email: M.zimmermann@sussex.ac.uk              # email address
+  email: m.zimmermann@sussex.ac.uk              # email address
 
 # Documentation
 
