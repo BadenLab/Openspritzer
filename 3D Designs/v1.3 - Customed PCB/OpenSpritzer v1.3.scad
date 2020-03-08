@@ -371,24 +371,24 @@ module LED(){
 module Logo(){
     translate([x_Box/2+3,-17,z_Box-Wall/2])rotate([0,0,90])scale([0.75,0.75,1])scale([0.2,0.2,1])import("C:/Users/Maxime/Documents/GitHub/Openspritzer/3D Designs/v1.3 - Customed PCB/Logo/Badenlab_logo.stl");
 }
-//C:/Users/Maxime/Desktop/Badenlab_logo.stl"
+
 module Title(){
-    translate([-20,-x_Box/2-15,z_Box-Wall/2])linear_extrude(h=Wall/2)rotate([0,0,90])text("OpenSpritzer",size=12);
-    translate([-12,40-17.5,z_Box-Wall/2])linear_extrude(h=Wall/2)rotate([0,0,90])text("v1.3",size=6);
-    translate([-2.5,-55,z_Box-Wall/2])linear_extrude(h=Wall/2)rotate([0,0,90])text("An open hardware pressure ejection system",size=4.5);
+    translate([-20,-x_Box/2-15,z_Box-Wall/2])linear_extrude(height=Wall/2)rotate([0,0,90])text("OpenSpritzer",size=12);
+    translate([-12,40-17.5,z_Box-Wall/2])linear_extrude(height=Wall/2)rotate([0,0,90])text("v1.3",size=6);
+    translate([-2.5,-55,z_Box-Wall/2])linear_extrude(height=Wall/2)rotate([0,0,90])text("An open hardware pressure ejection system",size=4.5);
 }
 module Labels(){
-    translate([22,-y_Box/2+Wall,z_Box/2+2.5])rotate([90,0,0])linear_extrude(h=Wall/2)text("TTL",size=5);
-    translate([-26,-y_Box/2+Wall,z_Box/2+2.5])rotate([90,0,0])linear_extrude(h=Wall/2)text("Pedal",size=5);
-    translate([-x_Box/2+29,-y_Box/2+Wall,z_Box/2+18])rotate([90,0,0])linear_extrude(h=Wall/2)text("Air out",size=5);
+    translate([22,-y_Box/2+Wall,z_Box/2+2.5])rotate([90,0,0])linear_extrude(height=Wall)text("TTL",size=5);
+    translate([-26,-y_Box/2+Wall,z_Box/2+2.5])rotate([90,0,0])linear_extrude(height=Wall)text("Pedal",size=5);
+    translate([-x_Box/2+29,-y_Box/2+Wall,z_Box/2+18])rotate([90,0,0])linear_extrude(height=Wall)text("Air out",size=5);
     
-    translate([x_Box/2+3*Wall,-y_Box/2+30,z_Box/2-17.5])rotate([90,0,0])rotate([0,90,0])linear_extrude(h=Wall/2)text("Pulse Duration",size=5);
-    translate([x_Box/2+3*Wall,-y_Box/2+4,z_Box/2-4])rotate([90,0,0])rotate([0,90,0])linear_extrude(h=Wall/2)text("Pedal / TTL",size=5);
+    translate([x_Box/2+3*Wall,-y_Box/2+30,z_Box/2-17.5])rotate([90,0,0])rotate([0,90,0])linear_extrude(height=Wall)text("Pulse Duration",size=5);
+    translate([x_Box/2+3*Wall,-y_Box/2+4,z_Box/2-4])rotate([90,0,0])rotate([0,90,0])linear_extrude(height=Wall)text("Pedal / TTL",size=5);
     
-    translate([12,y_Box/2+4*Wall-Wall,z_Box/2+10])rotate([90,0,180])linear_extrude(h=Wall/2)text("Air in",size=5);
+    translate([12,y_Box/2+4*Wall-Wall,z_Box/2+10])rotate([90,0,180])linear_extrude(height=Wall)text("Air in",size=5);
     
-    translate([-x_Box/2+Wall,8,z_Box/2+6])rotate([90,0,-90])linear_extrude(h=Wall/2)text("Power in",size=5);
-    translate([-x_Box/2+Wall,2,z_Box/2+-0.5])rotate([90,0,-90])linear_extrude(h=Wall/2)text("24V",size=5);
+    translate([-x_Box/2+Wall,8,z_Box/2+6])rotate([90,0,-90])linear_extrude(height=Wall)text("Power in",size=5);
+    translate([-x_Box/2+Wall,2,z_Box/2+-0.5])rotate([90,0,-90])linear_extrude(height=Wall)text("24V",size=5);
 }
 module Power_Switch(){
     //translate([-x_Box/2+x_Switch/2,y_Box/2-y_Switch,z_Box-Wall])cube([x_Switch+2*tol,y_Switch+2*tol,2*Wall]);
