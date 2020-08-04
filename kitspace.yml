@@ -1,0 +1,5 @@
+summary: OpenSpritzer, an open hardware pressure ejection system for reliably delivering picolitre volumes.
+site: https://www.nature.com/articles/s41598-017-02301-2
+color: blue
+bom: 1-click-bom.csv
+gerbers: PCB/gerber_files
