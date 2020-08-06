@@ -1,45 +1,45 @@
-Name,Manufacturer,Order ID,Retailer,Quantity,Observation 1,Observation 2
-,,,,,,
-Solenoid (either 2 ms or 7 ms model),FESTO,MHE2-M1SH-3/2G-M7-K-RR,Kiowa,1,Pneumatics,2 ms response + cable
-Precision pressure regulator,FESTO,LRP-1/4-4,RS,1,Pneumatics,0.05 to 4.0 bar
-Gauge,FESTO,MAP-40-4-1/8-EN,Kiowa,1,Pneumatics,"0.0 to 4.0 bar, 1/8 inch thread"
-"Push-in (6 mm) to thread (1/4"")",FESTO,QSL-1/4-6,RS,1,Pneumatics,6 mm to 1/4 inch
-"Push-in (4 mm) to thread (1/4"")",FESTO,QS-1/4-4,RS,1,Pneumatics,4 mm to 1/4 inch
-Push-in (4 mm) to thread (M7),FESTO,QSM-M7-4-I,RS,2,Pneumatics,4 mm to M7 thread
-4mm OD plastic tubing,FESTO,PUN-4x0.75,RS,12 cm,Pneumatics,4 mm OD and 10 bar
-PicoNozzle Kit,World Precision Instrument,5430 - x,WPI,1,Pneumatics,for 1.0 / 1.2 / 1.5 / 2.0 mm glass pipettes
-,,,,,,
-Arduino Nano,Arduino,,RS,1,Electronics,nano
-PCB socket,Samtec,SSW-116-02-G-S ,RS,2,Electronics,"1 row, 15 pin"
-Darlington pair NPN transistor,Fairchild,KSP 13BU,Farnell,1,Electronics,"Ic = 500 mA, Vces = 30 V"
-1 k? variable resistor,Vishay,249FGJSPXB25102KA ,RS,1,Electronics,panel mount
-Knob for variable resistor,RS Online,783-0192,TE Connectivity,1,Electronics,6.35mm shaft radius
-DPDT switch,Multicomp,2MD3T2B2M6RE,Farnell,1,Electronics,ON-(OFF)-ON panel mount
-SPST footswitch,RS Online,335-319,RS,1,Electronics,push-to-contact
-24V DC desktop PSU 2.1 mm jack,RS Online,436-058,RS,1,Electronics,24 V dc 1 A
-2.1 mm right angle DC socket,RS Online,884-0957,RS,1,Electronics,2.1 mm right angle
-24 V Zener Diode,Semiconductor,1N5359BG,Farnell,1,Electronics,24V
-1N4148 signal diode,Fairchild,1n4148,Farnell,1,Electronics,24V
-1 k? resistor,Digikey,CF14JT1K00CT-ND,Digikey,3,Electronics,1 k? through hole resistor
-220 ? resistor,Digikey,CF14JT220RCT-ND,Digikey,3,Electronics,220 ? through hole resistor
-Voltage step-down regulator,RS Online,533-3743,RS,1,Electronics,"5V, 3A"
-Capacitor 680 µF,RS Online,526-1569,RS,1,Electronics,24V minimum
-Capacitor 220 µF,RS Online,526-1480,RS,1,Electronics,24V minimum
-Diode 1N5824,RS Online,714-6819 ,RS,1,Electronics,24V minimum
-Inductor 33 µH,Bourns,RLB0914-330KL,Farnell,1,Electronics,
-3 mm LED,Digikey,350-1557-ND,Digikey,1,Electronics,"3mm round, throughhole, grn"
-Mount for 3 mm LED,Digikey,67-1330-ND,Digikey,1,Electronics,3mm panel mount
-BNC coaxial connectors,TE Connectivity,1-1337542-0,Farnell,2,Electronics,"Right angle jacks, 50ohm"
-Cable Mount BNC Connector,RS Online,546-3721,RS,1,Electronics,Plug Crimp Termination
-2 way JST Female Connector Housing,RS Online,820-1611,JST,2,Electronics,
-3 way JST Female Connector Housing,RS Online,820-1614,JST,1,Electronics,
-2 way JST PCB header,RS Online,820-1554,JST,2,Electronics,
-3 way JST PCB header,RS Online,820-1557,JST,1,Electronics,
-2 distinc colour wires,RS Online,331-862,RS,20 cm,Electronics,20 AWG
-Cable shrink,RS Online,170-6377,RS,5 cm,Electronics,Shrunk diameter 1.2 mm
-Rocker LED switch,,,Ebay,1,Electronics,Round Switch / 3 pins
-,,,,,,
-M3 x 10mm screw,RS Online,660-4636,RS,4,Mechanical,M3 x 10 Hex socket cap
-M3 nut,RS Online,122-4400,RS,4,Mechanical,M3 nuts
-M4 x 50mm Hex Socket Cap Screws,RS Online,304-4592,RS,4,Mechanical,M4 x 50
-M4 nut,RS Online,189-579,RS,4,Mechanical,M4 nuts
+reference,Name,Manufacturer,Order ID,Retailer,Quantity,Observation 1,Observation 2
+,,,,,,,
+,Solenoid (either 2 ms or 7 ms model),FESTO,MHE2-M1SH-3/2G-M7-K-RR,Kiowa,1,Pneumatics,2 ms response + cable
+,Precision pressure regulator,FESTO,LRP-1/4-4,RS,1,Pneumatics,0.05 to 4.0 bar
+,Gauge,FESTO,MAP-40-4-1/8-EN,Kiowa,1,Pneumatics,"0.0 to 4.0 bar, 1/8 inch thread"
+,"Push-in (6 mm) to thread (1/4"")",FESTO,QSL-1/4-6,RS,1,Pneumatics,6 mm to 1/4 inch
+,"Push-in (4 mm) to thread (1/4"")",FESTO,QS-1/4-4,RS,1,Pneumatics,4 mm to 1/4 inch
+,Push-in (4 mm) to thread (M7),FESTO,QSM-M7-4-I,RS,2,Pneumatics,4 mm to M7 thread
+,4mm OD plastic tubing,FESTO,PUN-4x0.75,RS,12 cm,Pneumatics,4 mm OD and 10 bar
+,PicoNozzle Kit,World Precision Instrument,5430 - x,WPI,1,Pneumatics,for 1.0 / 1.2 / 1.5 / 2.0 mm glass pipettes
+,,,,,,,
+A1,Arduino Nano,Arduino,,RS,1,Electronics,nano
+A1,PCB socket,Samtec,SSW-116-02-G-S ,RS,2,Electronics,"1 row, 15 pin"
+,Darlington pair NPN transistor,Fairchild,KSP 13BU,Farnell,1,Electronics,"Ic = 500 mA, Vces = 30 V"
+RV1,1 k ohm variable resistor,Vishay,249FGJSPXB25102KAï¿½,RS,1,Electronics,panel mount
+,Knob for variable resistor,RS Online,783-0192,TE Connectivity,1,Electronics,6.35mm shaft radius
+SW1,DPDT switch,Multicomp,2MD3T2B2M6RE,Farnell,1,Electronics,ON-(OFF)-ON panel mount
+,SPST footswitch,RS Online,335-319,RS,1,Electronics,push-to-contact
+,24V DC desktop PSU 2.1 mm jack,RS Online,436-058,RS,1,Electronics,24 V dc 1 A
+,2.1 mm right angle DC socket,RS Online,884-0957,RS,1,Electronics,2.1 mm right angle
+D3,24 V Zener Diode,Semiconductor,1N5359BG,Farnell,1,Electronics,24V
+D2,1N4148 signal diode,Fairchild,1n4148,Farnell,1,Electronics,24V
+R4;R5;R6,1 k ohm resistor,Digikey,CF14JT1K00CT-ND,Digikey,3,Electronics,1 k? through hole resistor
+R1;R2;R3,220 ohm resistor,Stackpole electronics,CF14JT220R ,Digikey,3,Electronics,220 ? through hole resistor
+,Voltage step-down regulator,RS Online,533-3743,RS,1,Electronics,"5V, 3A"
+C1,Capacitor 680 uF,RS Online,526-1569,RS,1,Electronics,24V minimum
+C2,Capacitor 220 uF,RS Online,526-1480,RS,1,Electronics,24V minimum
+D4,Diode 1N5824,RS Online,714-6819ï¿½,RS,1,Electronics,24V minimum
+L1,Inductor 33 uH,Bourns,RLB0914-330KL,Farnell,1,Electronics,
+,3 mm LED,Digikey,350-1557-ND,Digikey,1,Electronics,"3mm round, throughhole, grn"
+,Mount for 3 mm LED,Digikey,67-1330-ND,Digikey,1,Electronics,3mm panel mount
+J1;J4,BNC coaxial connectors,TE Connectivity,1-1337542-0,Farnell,2,Electronics,"Right angle jacks, 50ohm"
+,Cable Mount BNC Connector,RS Online,546-3721,RS,1,Electronics,Plug Crimp Termination
+"J3,D1",2 way JST Female Connector Housing,RS Online,820-1611,JST,2,Electronics,
+SW2,3 way JST Female Connector Housing,RS Online,820-1614,JST,1,Electronics,
+,2 way JST PCB header,RS Online,820-1554,JST,2,Electronics,
+SW2,3 way JST PCB header,RS Online,820-1557,JST,1,Electronics,
+,2 distinc colour wires,RS Online,331-862,RS,20 cm,Electronics,20 AWG
+,Shrink tube,RS Online,170-6377,RS,5 cm,Electronics,Shrunk diameter 1.2 mm
+,Rocker LED switch,,,Ebay,1,Electronics,Round Switch / 3 pins
+,,,,,,,
+,M3 x 10mm screw,RS Online,660-4636,RS,4,Mechanical,M3 x 10 Hex socket cap
+,M3 nut,RS Online,122-4400,RS,4,Mechanical,M3 nuts
+,M4 x 50mm Hex Socket Cap Screws,RS Online,304-4592,RS,4,Mechanical,M4 x 50
+,M4 nut,RS Online,189-579,RS,4,Mechanical,M4 nuts
