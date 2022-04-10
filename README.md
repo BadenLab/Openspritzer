@@ -23,10 +23,10 @@ The hardware is licensed under the [CERN OHL v1.2](https://github.com/BadenLab/L
 
 ***
 
-- [A £350 DIY opensource microinjector](#Openspritzer,-a-DIY-opensource-microinjector.)
-- [An efficient device that provides similar level of control as commercial systems](#Openspritzer-rivals-the-performance-of-commercial-systems.)
-- [OpenSpritzer can deliver neurotransmitters with millisecond precision to control neural activity](#Openspritzer-in-neuroscience-experiments.)
-- [OpenSpritzer is suitable for delivering infectious agents including viral delivery of opsins for optogenetics](#Openspritzer-for-microinjection-of-infectious-agents)
+- [Openspritzer, a DIY opensource microinjector.](#openspritzer-a-diy-opensource-microinjector)
+- [Openspritzer rivals the performance of commercial systems.](#openspritzer-rivals-the-performance-of-commercial-systems)
+- [Openspritzer in neuroscience experiments.](#openspritzer-in-neuroscience-experiments)
+  - [Contributors:](#contributors)
 
 ***
 
@@ -77,7 +77,7 @@ We delivered precise amounts of glutamate(cyan) and GABA(orange) to hippocampal 
 <p align="justify">Then, to test the effect of command duration on effective dose delivey, we next applied puffs of increasing duration from 10 to 100 ms in 10 ms steps. Here, each additional 10 ms increase in duration produced a clear increase in both EPSP duration and amplitude. These results confirm the reliability and precision of Openspritzer for delivering small doses of an agent to a widely used biological sample in a controlled manner.</p>
 
 ***
-***
+
 
 <p align="justify">To demonstrate the utility of Openspritzer we performed multiple example experiments delivering agents ranging in size from single molecules to whole bacteria. Each experiment depended critically on the performance of the device. The spatio-temporal control of reagent delivery affored by Openspritzer is a primary feature of the device.
 
@@ -86,3 +86,18 @@ We delivered precise amounts of glutamate(cyan) and GABA(orange) to hippocampal 
 <p align="justify">We anticipate that due to its high performance and low cost Openspritzer will be of interest to a broad range of researchers working in the life and physical sciences.</p>
 
 <p align="center"><h6 align="right">Source: CJ. Forman et al, 2017 --  https://www.nature.com/articles/s41598-017-02301-2   </h6>
+
+***
+### Contributors:
+
+This project is under development for a number of years with contributors from different continents! Here is a small overview:
+
+**2017** formal prototype and publication: 
+CJ Forman, H Tomes, RJ Burman M Jacobs, T Baden, JV Raimondo
+
+**2018** creation of PCB, editable designs and 3D printed casing
+M Zimmermann, AM Chagas
+
+**2022** Screen add on for pulse duration feedback
+J Frie, J Khokhar
+
